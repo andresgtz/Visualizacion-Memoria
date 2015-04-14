@@ -1,16 +1,13 @@
 //
-//  ViewController.h
+//  Scene00.h
 //  Visualizacion-Memoria
 //
 //  Created by Enrique O Hernandez on 4/14/15.
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface ViewController : UIViewController
-
+@interface Scene00 : SKScene
 
 @end
-
