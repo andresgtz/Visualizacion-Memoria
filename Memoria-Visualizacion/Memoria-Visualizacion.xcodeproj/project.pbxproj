@@ -19,6 +19,7 @@
 		1B0E49D71ADDDFB0002A888B /* Scene00.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E49D51ADDDFB0002A888B /* Scene00.m */; };
 		1B0E49DB1ADDDFCB002A888B /* background_main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E49D91ADDDFCB002A888B /* background_main.jpg */; };
 		1B0E49DC1ADDDFCB002A888B /* background_main@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E49DA1ADDDFCB002A888B /* background_main@2x.jpg */; };
+		F01331881ADDE8C200C72A59 /* botones in Resources */ = {isa = PBXBuildFile; fileRef = F01331871ADDE8C200C72A59 /* botones */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		1B0E49D61ADDDFB0002A888B /* Scene00.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene00.h; sourceTree = "<group>"; };
 		1B0E49D91ADDDFCB002A888B /* background_main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_main.jpg; sourceTree = "<group>"; };
 		1B0E49DA1ADDDFCB002A888B /* background_main@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background_main@2x.jpg"; sourceTree = "<group>"; };
+		F01331871ADDE8C200C72A59 /* botones */ = {isa = PBXFileReference; lastKnownFileType = folder; path = botones; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		1B0E49D81ADDDFB5002A888B /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				F01331871ADDE8C200C72A59 /* botones */,
 				1B0E49D91ADDDFCB002A888B /* background_main.jpg */,
 				1B0E49DA1ADDDFCB002A888B /* background_main@2x.jpg */,
 			);
@@ -240,6 +243,7 @@
 				1B0E49DC1ADDDFCB002A888B /* background_main@2x.jpg in Resources */,
 				1B0E49DB1ADDDFCB002A888B /* background_main.jpg in Resources */,
 				1B0E49BA1ADDDF92002A888B /* Main.storyboard in Resources */,
+				F01331881ADDE8C200C72A59 /* botones in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +458,7 @@
 				1B0E49D01ADDDF92002A888B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B0E49D11ADDDF92002A888B /* Build configuration list for PBXNativeTarget "Memoria-VisualizacionTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +467,7 @@
 				1B0E49D31ADDDF92002A888B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
