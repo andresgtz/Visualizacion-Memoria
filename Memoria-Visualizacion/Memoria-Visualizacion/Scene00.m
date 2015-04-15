@@ -80,7 +80,33 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    //boton de next scene
     
+    //SKNode *startButton = [self childNodeWithName:@"buttonStart"];
+    
+    /* Called when a touch begins */
+    for (UITouch *touch in touches)
+    {
+        CGPoint location = [touch locationInNode:self];
+        /*
+        if([_btnSound containsPoint:location])
+        {
+            
+            Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            [self.view presentScene:scene transition:sceneTransition];
+        }
+        //Si le pican al boton de start
+        else if([startButton containsPoint:location])
+        {
+            
+            
+            Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            [self.view presentScene:scene transition:sceneTransition];
+        }
+         */
+    }
 }
 
 #pragma mark -
