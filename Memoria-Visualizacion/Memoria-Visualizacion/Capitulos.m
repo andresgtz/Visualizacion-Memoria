@@ -125,7 +125,7 @@
     for (UITouch *touch in touches)
     {
         CGPoint location = [touch locationInNode:self];
-        
+        /*
          if([btnIntro containsPoint:location])
          {
          
@@ -182,6 +182,7 @@
              SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
              [self.view presentScene:scene transition:sceneTransition];
          }
+        */
         
     }
 }
