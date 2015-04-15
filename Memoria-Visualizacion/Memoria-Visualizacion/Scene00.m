@@ -30,14 +30,11 @@
 {
     if(self=[super initWithSize:size]){
         SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"background_main.jpg"];
-        
-       // background.anchorPoint = CGPointZero;
-       // background.position = CGPointZero;
         background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         background.size = self.frame.size;
         
         [self addChild:background];
-       // self.backgroundColor = [SKColor greenColor];
+        [self setupBotones];
     }
     return self;
 }
@@ -50,10 +47,19 @@
 #pragma mark -
 #pragma mark Additional Scene Setup (sprites and such)
 
-- (void)setUpBookTitle
+- (void)setupBotones
 {
+    SKSpriteNode *titulo = [SKSpriteNode spriteNodeWithImageNamed:@"titulo_memoria"];
+    titulo.position = CGPointMake(500,500);
+    [self addChild:titulo];
     
+    SKSpriteNode *cap = [SKSpriteNode spriteNodeWithImageNamed:@"capitulos"];
+    cap.position = CGPointMake(250,200);
+    [self addChild:cap];
     
+    SKSpriteNode *act = [SKSpriteNode spriteNodeWithImageNamed:@"actividades"];
+    act.position = CGPointMake(750,200);
+    [self addChild:act];
 }
 
 - (void)setUpSoundButton
