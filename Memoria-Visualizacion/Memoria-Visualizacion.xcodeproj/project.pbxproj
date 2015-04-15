@@ -32,6 +32,7 @@
 		1B0E49F21ADDEB72002A888B /* titulo_memoria.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E49F11ADDEB72002A888B /* titulo_memoria.png */; };
 		1B86B9E71ADF20DA00782F2F /* Capitulos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B86B9E61ADF20DA00782F2F /* Capitulos.m */; };
 		1B86B9EA1ADF20FA00782F2F /* Actividades.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B86B9E91ADF20FA00782F2F /* Actividades.m */; };
+<<<<<<< Updated upstream
 		1B86B9F41ADF280E00782F2F /* button_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9EC1ADF280E00782F2F /* button_left.png */; };
 		1B86B9F51ADF280E00782F2F /* button_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9ED1ADF280E00782F2F /* button_left@2x.png */; };
 		1B86B9F61ADF280E00782F2F /* button_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9EE1ADF280E00782F2F /* button_right.png */; };
@@ -40,6 +41,9 @@
 		1B86B9F91ADF280E00782F2F /* footer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9F11ADF280E00782F2F /* footer@2x.png */; };
 		1B86B9FA1ADF280E00782F2F /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9F21ADF280E00782F2F /* start.png */; };
 		1B86B9FB1ADF280E00782F2F /* start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9F31ADF280E00782F2F /* start@2x.png */; };
+=======
+		F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */ = {isa = PBXBuildFile; fileRef = F0205C381ADF24EF00F56196 /* sistema_memoria.png */; };
+>>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,7 @@
 		1B86B9E81ADF20E600782F2F /* Capitulos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capitulos.h; sourceTree = "<group>"; };
 		1B86B9E91ADF20FA00782F2F /* Actividades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actividades.m; sourceTree = "<group>"; };
 		1B86B9EB1ADF210900782F2F /* Actividades.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Actividades.h; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		1B86B9EC1ADF280E00782F2F /* button_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_left.png; sourceTree = "<group>"; };
 		1B86B9ED1ADF280E00782F2F /* button_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_left@2x.png"; sourceTree = "<group>"; };
 		1B86B9EE1ADF280E00782F2F /* button_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_right.png; sourceTree = "<group>"; };
@@ -96,6 +101,9 @@
 		1B86B9F11ADF280E00782F2F /* footer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer@2x.png"; sourceTree = "<group>"; };
 		1B86B9F21ADF280E00782F2F /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		1B86B9F31ADF280E00782F2F /* start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start@2x.png"; sourceTree = "<group>"; };
+=======
+		F0205C381ADF24EF00F56196 /* sistema_memoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sistema_memoria.png; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +204,7 @@
 		1B0E49D81ADDDFB5002A888B /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				1B86B9EC1ADF280E00782F2F /* button_left.png */,
 				1B86B9ED1ADF280E00782F2F /* button_left@2x.png */,
 				1B86B9EE1ADF280E00782F2F /* button_right.png */,
@@ -204,6 +213,9 @@
 				1B86B9F11ADF280E00782F2F /* footer@2x.png */,
 				1B86B9F21ADF280E00782F2F /* start.png */,
 				1B86B9F31ADF280E00782F2F /* start@2x.png */,
+=======
+				F0205C381ADF24EF00F56196 /* sistema_memoria.png */,
+>>>>>>> Stashed changes
 				1B0E49F11ADDEB72002A888B /* titulo_memoria.png */,
 				1B0E49DD1ADDE9D9002A888B /* actividad_1.png */,
 				1B0E49DF1ADDE9EA002A888B /* actividad_2.png */,
@@ -309,6 +321,7 @@
 				1B0E49ED1ADDE9EA002A888B /* Introduccion.png in Resources */,
 				1B0E49E81ADDE9EA002A888B /* actividad_2.png in Resources */,
 				1B0E49BC1ADDDF92002A888B /* Images.xcassets in Resources */,
+				F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */,
 				1B0E49E91ADDE9EA002A888B /* actividad_3.png in Resources */,
 				1B0E49B41ADDDF92002A888B /* GameScene.sks in Resources */,
 				1B0E49DE1ADDE9D9002A888B /* actividad_1.png in Resources */,
