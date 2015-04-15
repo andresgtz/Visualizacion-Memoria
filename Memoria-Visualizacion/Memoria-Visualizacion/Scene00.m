@@ -29,12 +29,15 @@
 -(id)initWithSize:(CGSize)size
 {
     if(self=[super initWithSize:size]){
-       // SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"bg_pg01"];
+        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"background_main.jpg"];
+        
        // background.anchorPoint = CGPointZero;
        // background.position = CGPointZero;
+        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        background.size = self.frame.size;
         
-       // [self addChild:background];
-        self.backgroundColor = [SKColor greenColor];
+        [self addChild:background];
+       // self.backgroundColor = [SKColor greenColor];
     }
     return self;
 }

@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  ViewControllerSk.m
 //  Visualizacion-Memoria
 //
 //  Created by Enrique O Hernandez on 4/14/15.
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
-///////
 
-#import "ViewController.h"
+#import "ViewControllerSk.h"
 #import "Scene00.h"
 
 
-@implementation ViewController
+@implementation ViewControllerSk
 
+/*
 
 - (void)viewDidLoad
 {
@@ -36,19 +36,19 @@
     }
     
 }
-/*
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
-    
-    // Configure the view.
-    
-
-        
-    }
-    
-}
- */
+ // /*
+ - (void)viewWillLayoutSubviews
+ {
+ [super viewWillLayoutSubviews];
+ 
+ // Configure the view.
+ 
+ 
+ 
+ }
+ 
+ }
+ //
 
 - (BOOL)shouldAutorotate
 {
@@ -69,6 +69,6 @@
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
-
+*/
 
 @end
