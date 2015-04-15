@@ -1,6 +1,7 @@
 
 Visualizacion-Memoria/Visualizacion-Memoria.xcodeproj/project.xcworkspace/xcshareddata/Visualizacion-Memoria.xccheckout
 
+
 Visualizacion-Memoria/Memoria-Visualizacion.xcodeproj/project.xcworkspace/xcshareddata/Visualizacion-Memoria.xccheckout
 
 # xcode noise
@@ -14,3 +15,6 @@ build/*
 # osx noise
 .DS_Store
 profile
+
+*.xccheckout
+
