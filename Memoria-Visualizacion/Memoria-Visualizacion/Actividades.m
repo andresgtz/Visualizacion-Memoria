@@ -28,6 +28,26 @@
     return self;
 }
 
+-(void)setUpFooter
+{
+    SKSpriteNode *footer = [SKSpriteNode spriteNodeWithImageNamed:@"footer"];
+    footer.position = CGPointMake(0,0);
+    [self addChild:footer];
+    
+    SKSpriteNode *leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
+    leftButton.position = CGPointMake(0,0);
+    [self addChild:leftButton];
+    
+    SKSpriteNode *rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
+    rightButton.position = CGPointMake(0,0);
+    [self addChild:rightButton];
+    
+    SKSpriteNode *startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
+    startButton.position = CGPointMake(0,0);
+    [self addChild:startButton];
+    
+}
+
 - (void)willMoveFromView:(SKView *)view
 {
     

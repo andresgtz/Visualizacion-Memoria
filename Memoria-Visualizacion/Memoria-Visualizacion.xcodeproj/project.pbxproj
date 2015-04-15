@@ -42,11 +42,7 @@
 		1B86B9FB1ADF280E00782F2F /* start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9F31ADF280E00782F2F /* start@2x.png */; };
 		1B86B9FE1ADF2AF700782F2F /* background_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9FC1ADF2AF700782F2F /* background_main.png */; };
 		1B86B9FF1ADF2AF700782F2F /* background_main@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9FD1ADF2AF700782F2F /* background_main@2x.png */; };
-=======
-=======
 		F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */ = {isa = PBXBuildFile; fileRef = F0205C381ADF24EF00F56196 /* sistema_memoria.png */; };
->>>>>>> Stashed changes
->>>>>>> origin/master
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,11 +101,9 @@
 		1B86B9F31ADF280E00782F2F /* start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start@2x.png"; sourceTree = "<group>"; };
 		1B86B9FC1ADF2AF700782F2F /* background_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_main.png; sourceTree = "<group>"; };
 		1B86B9FD1ADF2AF700782F2F /* background_main@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_main@2x.png"; sourceTree = "<group>"; };
-=======
-=======
+
 		F0205C381ADF24EF00F56196 /* sistema_memoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sistema_memoria.png; sourceTree = "<group>"; };
->>>>>>> Stashed changes
->>>>>>> origin/master
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,9 +214,7 @@
 				1B86B9F11ADF280E00782F2F /* footer@2x.png */,
 				1B86B9F21ADF280E00782F2F /* start.png */,
 				1B86B9F31ADF280E00782F2F /* start@2x.png */,
-=======
 				F0205C381ADF24EF00F56196 /* sistema_memoria.png */,
->>>>>>> Stashed changes
 				1B0E49F11ADDEB72002A888B /* titulo_memoria.png */,
 				1B0E49DD1ADDE9D9002A888B /* actividad_1.png */,
 				1B0E49DF1ADDE9EA002A888B /* actividad_2.png */,
