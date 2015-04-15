@@ -30,6 +30,8 @@
 		1B0E49EF1ADDE9EA002A888B /* memoria_ram.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E49E61ADDE9EA002A888B /* memoria_ram.png */; };
 		1B0E49F01ADDE9EA002A888B /* resumen.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E49E71ADDE9EA002A888B /* resumen.png */; };
 		1B0E49F21ADDEB72002A888B /* titulo_memoria.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E49F11ADDEB72002A888B /* titulo_memoria.png */; };
+		1B86B9E71ADF20DA00782F2F /* Capitulos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B86B9E61ADF20DA00782F2F /* Capitulos.m */; };
+		1B86B9EA1ADF20FA00782F2F /* Actividades.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B86B9E91ADF20FA00782F2F /* Actividades.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,10 @@
 		1B0E49E61ADDE9EA002A888B /* memoria_ram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = memoria_ram.png; path = botones/memoria_ram.png; sourceTree = "<group>"; };
 		1B0E49E71ADDE9EA002A888B /* resumen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = resumen.png; path = botones/resumen.png; sourceTree = "<group>"; };
 		1B0E49F11ADDEB72002A888B /* titulo_memoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titulo_memoria.png; sourceTree = "<group>"; };
+		1B86B9E61ADF20DA00782F2F /* Capitulos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Capitulos.m; sourceTree = "<group>"; };
+		1B86B9E81ADF20E600782F2F /* Capitulos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capitulos.h; sourceTree = "<group>"; };
+		1B86B9E91ADF20FA00782F2F /* Actividades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actividades.m; sourceTree = "<group>"; };
+		1B86B9EB1ADF210900782F2F /* Actividades.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Actividades.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,10 @@
 			children = (
 				1B0E49D51ADDDFB0002A888B /* Scene00.m */,
 				1B0E49D61ADDDFB0002A888B /* Scene00.h */,
+				1B86B9E61ADF20DA00782F2F /* Capitulos.m */,
+				1B86B9E81ADF20E600782F2F /* Capitulos.h */,
+				1B86B9E91ADF20FA00782F2F /* Actividades.m */,
+				1B86B9EB1ADF210900782F2F /* Actividades.h */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -305,6 +315,8 @@
 				1B0E49AF1ADDDF92002A888B /* AppDelegate.m in Sources */,
 				1B0E49B21ADDDF92002A888B /* GameScene.m in Sources */,
 				1B0E49AC1ADDDF92002A888B /* main.m in Sources */,
+				1B86B9EA1ADF20FA00782F2F /* Actividades.m in Sources */,
+				1B86B9E71ADF20DA00782F2F /* Capitulos.m in Sources */,
 				1B0E49D71ADDDFB0002A888B /* Scene00.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

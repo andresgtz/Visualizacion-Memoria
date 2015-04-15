@@ -15,7 +15,8 @@
 //
 
 #import "Scene00.h"
-//#import "Scene01.h"
+#import "Capitulos.h"
+#import "Actividades.h"
 @import AVFoundation;
 
 @implementation Scene00
@@ -61,6 +62,7 @@
     act.position = CGPointMake(750,200);
     [self addChild:act];
 }
+
 
 - (void)setUpSoundButton
 {
