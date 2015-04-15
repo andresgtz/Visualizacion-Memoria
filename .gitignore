@@ -1,2 +1,16 @@
 
 Visualizacion-Memoria/Visualizacion-Memoria.xcodeproj/project.xcworkspace/xcshareddata/Visualizacion-Memoria.xccheckout
+
+Visualizacion-Memoria/Memoria-Visualizacion.xcodeproj/project.xcworkspace/xcshareddata/Visualizacion-Memoria.xccheckout
+
+# xcode noise
+build/*
+*.pbxuser
+*.mode1v3
+
+# old skool
+.svn
+
+# osx noise
+.DS_Store
+profile
