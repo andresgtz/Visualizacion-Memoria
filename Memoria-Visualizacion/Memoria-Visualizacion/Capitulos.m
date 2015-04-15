@@ -71,6 +71,20 @@
     SKSpriteNode *btn_resumen = [SKSpriteNode spriteNodeWithImageNamed:@"resumen"];
     btn_resumen.position = CGPointMake(50,200);
     [self addChild:btn_resumen];
+    
+    SKSpriteNode *footer = [SKSpriteNode spriteNodeWithImageNamed:@"footer"];
+    footer.position = CGPointMake(0,0);
+    [self addChild:footer];
+    
+    SKSpriteNode *start = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
+    footer.position = CGPointMake(self.frame.size.width / 2,50);
+    [self addChild:footer];
+    
+    SKSpriteNode *btn_footer_left = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
+    btn_footer_left.position = CGPointMake(self.frame.size.width / 2,50);
+    [self addChild:btn_footer_left];
+    
+    
 }
 
 
