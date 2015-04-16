@@ -9,6 +9,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface Cap01_Intro : SKView
+@interface Cap01_Intro : SKScene
 
 @end

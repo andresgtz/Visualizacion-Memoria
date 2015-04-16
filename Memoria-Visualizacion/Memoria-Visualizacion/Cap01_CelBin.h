@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface Cap01_CelBin : SKView
+@interface Cap01_CelBin : SKScene
 
 @end

@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface Cap01_Resumen : SKView
+@interface Cap01_Resumen : SKScene
 
 @end

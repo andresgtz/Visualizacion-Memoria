@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface Cap01_MemRAM_NxM : SKView
+@interface Cap01_MemRAM_NxM : SKScene
 
 @end
