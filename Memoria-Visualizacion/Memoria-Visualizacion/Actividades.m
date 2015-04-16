@@ -18,12 +18,12 @@
 -(id)initWithSize:(CGSize)size
 {
     if(self=[super initWithSize:size]){
-        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"background_main"];
-        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-        background.size = self.frame.size;
         
-        [self addChild:background];
-        [self setupBotones];
+        
+        self.backgroundColor = [SKColor blueColor];
+        
+        [self setUpFooter];
+        
     }
     return self;
 }
@@ -31,19 +31,19 @@
 -(void)setUpFooter
 {
     SKSpriteNode *footer = [SKSpriteNode spriteNodeWithImageNamed:@"footer"];
-    footer.position = CGPointMake(0,0);
+    footer.position = CGPointMake(self.size.width/2, 38);
     [self addChild:footer];
     
     SKSpriteNode *leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
-    leftButton.position = CGPointMake(0,0);
+    leftButton.position = CGPointMake(38, 38);
     [self addChild:leftButton];
     
     SKSpriteNode *rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
-    rightButton.position = CGPointMake(0,0);
+    rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
     [self addChild:rightButton];
     
     SKSpriteNode *startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
-    startButton.position = CGPointMake(0,0);
+    startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
     
 }
@@ -58,17 +58,7 @@
 
 - (void)setupBotones
 {
-    SKSpriteNode *titulo = [SKSpriteNode spriteNodeWithImageNamed:@"titulo_memoria"];
-    titulo.position = CGPointMake(500,500);
-    [self addChild:titulo];
     
-    SKSpriteNode *cap = [SKSpriteNode spriteNodeWithImageNamed:@"capitulos"];
-    cap.position = CGPointMake(250,200);
-    [self addChild:cap];
-    
-    SKSpriteNode *act = [SKSpriteNode spriteNodeWithImageNamed:@"actividades"];
-    act.position = CGPointMake(750,200);
-    [self addChild:act];
 }
 
 

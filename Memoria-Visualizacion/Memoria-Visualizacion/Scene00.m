@@ -21,7 +21,8 @@
 
 @implementation Scene00
 {
-    
+    SKSpriteNode *capitulos;
+    SKSpriteNode *actividades;
 }
 
 #pragma mark -
@@ -54,13 +55,13 @@
     titulo.position = CGPointMake(500,500);
     [self addChild:titulo];
     
-    SKSpriteNode *cap = [SKSpriteNode spriteNodeWithImageNamed:@"capitulos"];
-    cap.position = CGPointMake(250,200);
-    [self addChild:cap];
+    capitulos = [SKSpriteNode spriteNodeWithImageNamed:@"capitulos"];
+    capitulos.position = CGPointMake(250,200);
+    [self addChild:capitulos];
     
-    SKSpriteNode *act = [SKSpriteNode spriteNodeWithImageNamed:@"actividades"];
-    act.position = CGPointMake(750,200);
-    [self addChild:act];
+    actividades = [SKSpriteNode spriteNodeWithImageNamed:@"actividades"];
+    actividades.position = CGPointMake(750,200);
+    [self addChild:actividades];
 }
 
 
@@ -91,29 +92,30 @@
     //boton de next scene
     
     //SKNode *startButton = [self childNodeWithName:@"buttonStart"];
+    SKNode *capitulos = [self childNodeWithName:@"capitulos"];
     
     /* Called when a touch begins */
     for (UITouch *touch in touches)
     {
         CGPoint location = [touch locationInNode:self];
-        /*
-        if([_btnSound containsPoint:location])
+        
+        if([actividades containsPoint:location])
         {
             
-            Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+            Actividades *scene = [[Actividades alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
         //Si le pican al boton de start
-        else if([startButton containsPoint:location])
+        else if([capitulos containsPoint:location])
         {
             
             
-            Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
-         */
+        
     }
 }
 
