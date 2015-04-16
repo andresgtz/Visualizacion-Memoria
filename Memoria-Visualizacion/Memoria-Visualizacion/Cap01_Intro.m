@@ -6,10 +6,16 @@
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
 #import "Cap01_Intro.h"
+#import "Scene00.h"
 @import AVFoundation;
 
 @implementation Cap01_Intro
-
+{
+    //footer
+    SKSpriteNode *leftButton;
+    SKSpriteNode *rightButton;
+    SKSpriteNode *startButton;
+}
 
 -(id)initWithSize:(CGSize)size
 {
@@ -31,19 +37,20 @@
     footer.position = CGPointMake(self.size.width/2, 38);
     [self addChild:footer];
     
-    SKSpriteNode *leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
+    leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
     leftButton.position = CGPointMake(38, 38);
     [self addChild:leftButton];
     
-    SKSpriteNode *rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
+    rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
     rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
     [self addChild:rightButton];
     
-    SKSpriteNode *startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
+    startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
     
 }
+
 -(void)setUpInitialText
 {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
@@ -100,24 +107,12 @@
     for (UITouch *touch in touches)
     {
         CGPoint location = [touch locationInNode:self];
-        /*
-         if([_btnSound containsPoint:location])
-         {
-         
-         Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
-         SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
-         [self.view presentScene:scene transition:sceneTransition];
-         }
-         //Si le pican al boton de start
-         else if([startButton containsPoint:location])
-         {
-         
-         
-         Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
-         SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
-         [self.view presentScene:scene transition:sceneTransition];
-         }
-         */
+        if([startButton containsPoint:location])
+        {
+            Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            [self.view presentScene:scene transition:sceneTransition];
+        }
     }
 }
 
