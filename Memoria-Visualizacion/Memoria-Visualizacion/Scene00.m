@@ -91,8 +91,7 @@
 {
     //boton de next scene
     
-    //SKNode *startButton = [self childNodeWithName:@"buttonStart"];
-    SKNode *capitulos = [self childNodeWithName:@"capitulos"];
+   
     
     /* Called when a touch begins */
     for (UITouch *touch in touches)

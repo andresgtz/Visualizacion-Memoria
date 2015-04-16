@@ -10,7 +10,7 @@
 
 @implementation Cap01_SistMemoria
 
-/
+
 
 -(id)initWithSize:(CGSize)size
 {
@@ -20,7 +20,7 @@
         self.backgroundColor = [SKColor redColor];
         
         [self setUpFooter];
-        [self setUpInitialText]
+        [self setUpInitialText];
         
     }
     return self;
@@ -52,6 +52,7 @@
     label.fontSize = 20.0;
     label.fontColor = [UIColor whiteColor];
     label.position = CGPointMake(400, 400);
+    [self addChild:label];
 }
 
 - (void)willMoveFromView:(SKView *)view

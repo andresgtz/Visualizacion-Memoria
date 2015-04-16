@@ -9,11 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "Scene00.h"
 #import "Capitulos.h"
+#import "Cap01_Intro.h"
+#import "Cap01_MemRAM.h"
+#import "Cap01_CelBin.h"
+#import "Cap01_MemRAM_NxM.h"
+#import "Cap01_SistMemoria.h"
+#import "Cap01_Resumen.h"
 @import AVFoundation;
 
 @implementation Capitulos
 {
-    
+    SKSpriteNode *btn_intro;
+    SKSpriteNode *btn_mem_ram;
+    SKSpriteNode *btn_cel_bin;
+    SKSpriteNode *btn_mem_nm;
+    SKSpriteNode *btn_sis_mem;
+    SKSpriteNode *btn_resumen;
 }
 
 #pragma mark -
@@ -33,6 +44,7 @@
          */
         self.backgroundColor = [SKColor grayColor];
         [self setupBotones];
+        [self setUpFooter];
     }
     return self;
 }
@@ -48,45 +60,52 @@
 - (void)setupBotones
 {
     
-    SKSpriteNode *btn_intro = [SKSpriteNode spriteNodeWithImageNamed:@"introduccion"];
-    btn_intro.position = CGPointMake(50,500);
+    btn_intro = [SKSpriteNode spriteNodeWithImageNamed:@"introduccion"];
+    btn_intro.position = CGPointMake(100,500);
     [self addChild:btn_intro];
     
-    SKSpriteNode *btn_mem_ram = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_ram"];
-    btn_mem_ram.position = CGPointMake(50,400);
+    btn_mem_ram = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_ram"];
+    btn_mem_ram.position = CGPointMake(100,400);
     [self addChild:btn_mem_ram];
     
-    SKSpriteNode *btn_cel_bin = [SKSpriteNode spriteNodeWithImageNamed:@"celda_binaria"];
-    btn_cel_bin.position = CGPointMake(50,300);
+    btn_cel_bin = [SKSpriteNode spriteNodeWithImageNamed:@"celda_binaria"];
+    btn_cel_bin.position = CGPointMake(100,300);
     [self addChild:btn_cel_bin];
     
-    SKSpriteNode *btn_mem_nm = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_nxm"];
-    btn_mem_nm.position = CGPointMake(50,200);
+    btn_mem_nm = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_nxm"];
+    btn_mem_nm.position = CGPointMake(100,200);
     [self addChild:btn_mem_nm];
     
-    SKSpriteNode *btn_sis_mem = [SKSpriteNode spriteNodeWithImageNamed:@"sistema_memoria"];
-    btn_sis_mem.position = CGPointMake(50,200);
+    btn_sis_mem = [SKSpriteNode spriteNodeWithImageNamed:@"sistema_memoria"];
+    btn_sis_mem.position = CGPointMake(100,200);
     [self addChild:btn_sis_mem];
     
-    SKSpriteNode *btn_resumen = [SKSpriteNode spriteNodeWithImageNamed:@"resumen"];
-    btn_resumen.position = CGPointMake(50,200);
+    btn_resumen = [SKSpriteNode spriteNodeWithImageNamed:@"resumen"];
+    btn_resumen.position = CGPointMake(100,200);
     [self addChild:btn_resumen];
-    
-    SKSpriteNode *footer = [SKSpriteNode spriteNodeWithImageNamed:@"footer"];
-    footer.position = CGPointMake(0,0);
-    [self addChild:footer];
-    
-    SKSpriteNode *start = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
-    footer.position = CGPointMake(self.frame.size.width / 2,50);
-    [self addChild:footer];
-    
-    SKSpriteNode *btn_footer_left = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
-    btn_footer_left.position = CGPointMake(self.frame.size.width / 2,50);
-    [self addChild:btn_footer_left];
     
     
 }
 
+-(void)setUpFooter
+{
+    SKSpriteNode *footer = [SKSpriteNode spriteNodeWithImageNamed:@"footer"];
+    footer.position = CGPointMake(self.size.width/2, 38);
+    [self addChild:footer];
+    
+    SKSpriteNode *leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
+    leftButton.position = CGPointMake(38, 38);
+    [self addChild:leftButton];
+    
+    SKSpriteNode *rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
+    rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
+    [self addChild:rightButton];
+    
+    SKSpriteNode *startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
+    startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
+    [self addChild:startButton];
+    
+}
 
 - (void)setUpSoundButton
 {
@@ -114,75 +133,56 @@
 {
     //boton de next scene
     
-    SKNode *btn_intro = [self childNodeWithName:@"btn_intro"];
-    SKNode *btn_mem_ram = [self childNodeWithName:@"btn_mem_ram"];
-    SKNode *btn_celda_binaria = [self childNodeWithName:@"btn_cel_bin"];
-    SKNode *btn_mem_nxm = [self childNodeWithName:@"btn_mem_nm"];
-    SKNode *btn_sis_mem = [self childNodeWithName:@"btn_sis_mem"];
-    SKNode *btn_resumen = [self childNodeWithName:@"btn_resumen"];
+
     
     /* Called when a touch begins */
     for (UITouch *touch in touches)
     {
         CGPoint location = [touch locationInNode:self];
-        /*
-         if([btnIntro containsPoint:location])
+        
+        //scene introduccion
+         if([btn_intro containsPoint:location])
          {
-         
-         Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+         Cap01_Intro *scene = [[Cap01_Intro alloc] initWithSize:self.size];
          SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
          [self.view presentScene:scene transition:sceneTransition];
          }
-         //Si le pican al boton de start
+        //scene memoria ram
          else if([btn_mem_ram containsPoint:location])
          {
-         
-         
-         Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
-         SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
-         [self.view presentScene:scene transition:sceneTransition];
-         }
-         else if([btn_mem_ram containsPoint:location])
-         {
-             
-             
-             Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+             Cap01_MemRAM *scene = [[Cap01_MemRAM alloc] initWithSize:self.size];
              SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
              [self.view presentScene:scene transition:sceneTransition];
          }
-         else if([btn_celda_binaria containsPoint:location])
+        //scene celdas binarias
+         else if([btn_cel_bin containsPoint:location])
          {
-             
-             
-             Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+             Cap01_CelBin *scene = [[Cap01_CelBin alloc] initWithSize:self.size];
              SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
              [self.view presentScene:scene transition:sceneTransition];
          }
-         else if([btn_mem_nxm containsPoint:location])
+        //scene memorias nxm
+         else if([btn_mem_nm containsPoint:location])
          {
-             
-             
-             Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+             Cap01_MemRAM_NxM *scene = [[Cap01_MemRAM_NxM alloc] initWithSize:self.size];
              SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
              [self.view presentScene:scene transition:sceneTransition];
          }
+        //scene sistema memorias
          else if([btn_sis_mem containsPoint:location])
          {
-             
-             
-             Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+             Cap01_SistMemoria *scene = [[Cap01_SistMemoria alloc] initWithSize:self.size];
              SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
              [self.view presentScene:scene transition:sceneTransition];
          }
+        //scene resumen
          else if([btn_resumen containsPoint:location])
          {
-             
-             
-             Scene01 *scene = [[Scene01 alloc] initWithSize:self.size];
+             Cap01_Resumen *scene = [[Cap01_Resumen alloc] initWithSize:self.size];
              SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
              [self.view presentScene:scene transition:sceneTransition];
          }
-        */
+        
         
     }
 }
