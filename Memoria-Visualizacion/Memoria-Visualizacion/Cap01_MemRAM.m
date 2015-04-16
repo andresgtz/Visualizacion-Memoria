@@ -23,7 +23,7 @@
     if(self=[super initWithSize:size]){
         
         
-        self.backgroundColor = [SKColor redColor];
+        self.backgroundColor = [SKColor yellowColor];
         
         [self setUpFooter];
         [self setUpInitialText];

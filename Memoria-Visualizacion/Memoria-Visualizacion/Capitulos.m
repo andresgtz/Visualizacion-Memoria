@@ -67,27 +67,27 @@
 {
     
     btn_intro = [SKSpriteNode spriteNodeWithImageNamed:@"introduccion"];
-    btn_intro.position = CGPointMake(100,500);
+    btn_intro.position = CGPointMake(500,650);
     [self addChild:btn_intro];
     
     btn_mem_ram = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_ram"];
-    btn_mem_ram.position = CGPointMake(100,400);
+    btn_mem_ram.position = CGPointMake(500,550);
     [self addChild:btn_mem_ram];
     
     btn_cel_bin = [SKSpriteNode spriteNodeWithImageNamed:@"celda_binaria"];
-    btn_cel_bin.position = CGPointMake(100,300);
+    btn_cel_bin.position = CGPointMake(500,450);
     [self addChild:btn_cel_bin];
     
     btn_mem_nm = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_nxm"];
-    btn_mem_nm.position = CGPointMake(100,200);
+    btn_mem_nm.position = CGPointMake(500,350);
     [self addChild:btn_mem_nm];
     
     btn_sis_mem = [SKSpriteNode spriteNodeWithImageNamed:@"sistema_memoria"];
-    btn_sis_mem.position = CGPointMake(100,200);
+    btn_sis_mem.position = CGPointMake(500,250);
     [self addChild:btn_sis_mem];
     
     btn_resumen = [SKSpriteNode spriteNodeWithImageNamed:@"resumen"];
-    btn_resumen.position = CGPointMake(100,200);
+    btn_resumen.position = CGPointMake(500,150);
     [self addChild:btn_resumen];
     
     

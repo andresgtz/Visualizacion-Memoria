@@ -28,6 +28,7 @@
         self.backgroundColor = [SKColor blueColor];
         
         [self setUpFooter];
+        [self setUpInitialText];
         
     }
     return self;
@@ -51,6 +52,15 @@
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
     
+}
+-(void)setUpInitialText
+{
+    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    label.text = @"Actividades!";
+    label.fontSize = 20.0;
+    label.fontColor = [UIColor whiteColor];
+    label.position = CGPointMake(400, 400);
+    [self addChild:label];
 }
 
 - (void)willMoveFromView:(SKView *)view

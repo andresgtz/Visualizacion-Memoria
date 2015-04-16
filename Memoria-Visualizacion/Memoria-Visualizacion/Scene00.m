@@ -52,7 +52,7 @@
 - (void)setupBotones
 {
     SKSpriteNode *titulo = [SKSpriteNode spriteNodeWithImageNamed:@"titulo_memoria"];
-    titulo.position = CGPointMake(500,500);
+    titulo.position = CGPointMake(520,400);
     [self addChild:titulo];
     
     capitulos = [SKSpriteNode spriteNodeWithImageNamed:@"capitulos"];
