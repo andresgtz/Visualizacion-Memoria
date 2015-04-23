@@ -129,7 +129,7 @@
         else if([btn_act1 containsPoint:location])
         {
             Actividad_01 *scene = [[Actividad_01 alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            SKTransition *sceneTransition = [SKTransition flipVerticalWithDuration:1]; //[SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
         
