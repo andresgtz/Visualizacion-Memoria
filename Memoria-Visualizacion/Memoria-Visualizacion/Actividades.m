@@ -10,10 +10,14 @@
 #import "Scene00.h"
 #import "Capitulos.h"
 #import "Actividades.h"
+#import "Actividad_01.h"
 @import AVFoundation;
 
 @implementation Actividades
 {
+    SKSpriteNode *btn_act1;
+    SKSpriteNode *btn_act2;
+    SKSpriteNode *btn_act3;
     //footer
     SKSpriteNode *leftButton;
     SKSpriteNode *rightButton;
@@ -28,7 +32,8 @@
         self.backgroundColor = [SKColor blueColor];
         
         [self setUpFooter];
-        [self setUpInitialText];
+        [self setupBotones];
+        //[self setUpInitialText];
         
     }
     return self;
@@ -53,6 +58,16 @@
     [self addChild:startButton];
     
 }
+- (void)setupBotones
+{
+    
+    btn_act1 = [SKSpriteNode spriteNodeWithImageNamed:@"actividad_1"];
+    btn_act1.position = CGPointMake(500,650);
+    [self addChild:btn_act1];
+   
+    
+    
+}
 -(void)setUpInitialText
 {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
@@ -70,12 +85,6 @@
 
 #pragma mark -
 #pragma mark Additional Scene Setup (sprites and such)
-
-- (void)setupBotones
-{
-    
-}
-
 
 - (void)setUpSoundButton
 {
@@ -116,6 +125,14 @@
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
+        //scene Actividad 1
+        else if([btn_act1 containsPoint:location])
+        {
+            Actividad_01 *scene = [[Actividad_01 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            [self.view presentScene:scene transition:sceneTransition];
+        }
+        
     }
 }
 
