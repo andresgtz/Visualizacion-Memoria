@@ -53,6 +53,7 @@
 		1B4632CC1ADF37E30012ABEB /* Cap01_MemRAM_NxM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4632CB1ADF37E30012ABEB /* Cap01_MemRAM_NxM.m */; };
 		1B4632CF1ADF38010012ABEB /* Cap01_SistMemoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4632CE1ADF38010012ABEB /* Cap01_SistMemoria.m */; };
 		1B4632D21ADF38260012ABEB /* Cap01_Resumen.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4632D11ADF38260012ABEB /* Cap01_Resumen.m */; };
+		1B7FC93A1AE944B30047AE3F /* actividad_1_linas.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B7FC9391AE944B30047AE3F /* actividad_1_linas.png */; };
 		1B86B9E71ADF20DA00782F2F /* Capitulos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B86B9E61ADF20DA00782F2F /* Capitulos.m */; };
 		1B86B9EA1ADF20FA00782F2F /* Actividades.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B86B9E91ADF20FA00782F2F /* Actividades.m */; };
 		1B86B9F41ADF280E00782F2F /* button_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9EC1ADF280E00782F2F /* button_left.png */; };
@@ -145,6 +146,7 @@
 		1B4632CE1ADF38010012ABEB /* Cap01_SistMemoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cap01_SistMemoria.m; sourceTree = "<group>"; };
 		1B4632D01ADF38260012ABEB /* Cap01_Resumen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cap01_Resumen.h; sourceTree = "<group>"; };
 		1B4632D11ADF38260012ABEB /* Cap01_Resumen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cap01_Resumen.m; sourceTree = "<group>"; };
+		1B7FC9391AE944B30047AE3F /* actividad_1_linas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actividad_1_linas.png; sourceTree = "<group>"; };
 		1B86B9E61ADF20DA00782F2F /* Capitulos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Capitulos.m; sourceTree = "<group>"; };
 		1B86B9E81ADF20E600782F2F /* Capitulos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capitulos.h; sourceTree = "<group>"; };
 		1B86B9E91ADF20FA00782F2F /* Actividades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actividades.m; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 		1B462BB51AE86E7900F600F0 /* Actividad1 */ = {
 			isa = PBXGroup;
 			children = (
+				1B7FC9391AE944B30047AE3F /* actividad_1_linas.png */,
 				1B462BBA1AE8732F00F600F0 /* memoria_act1.png */,
 				1B462BB61AE871AC00F600F0 /* memoria_box.png */,
 				1B462BB71AE871AC00F600F0 /* Memoria.png */,
@@ -462,6 +465,7 @@
 				1B86B9F51ADF280E00782F2F /* button_left@2x.png in Resources */,
 				1B0E49DB1ADDDFCB002A888B /* background_main.jpg in Resources */,
 				1B86B9F71ADF280E00782F2F /* button_right@2x.png in Resources */,
+				1B7FC93A1AE944B30047AE3F /* actividad_1_linas.png in Resources */,
 				1B0E49BA1ADDDF92002A888B /* Main.storyboard in Resources */,
 				1B462BAD1AE863B600F600F0 /* Act1Ins.png in Resources */,
 				1B462BAA1AE8621400F600F0 /* Actividad1.png in Resources */,

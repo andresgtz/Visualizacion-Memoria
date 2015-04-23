@@ -39,6 +39,7 @@
     SKSpriteNode *mem_4;
     SKSpriteNode *decoder;
     SKSpriteNode *instructions;
+    SKSpriteNode *lineas;
     
     //footer
     SKSpriteNode *leftButton;
@@ -95,6 +96,10 @@
 }
 
 -(void)setUpImages{
+    
+    lineas = [SKSpriteNode spriteNodeWithImageNamed:@"actividad_1_linas"];
+    lineas.position = CGPointMake(self.size.width/2, self.size.height/2+30);
+    [self addChild:lineas];
     
     title = [SKSpriteNode spriteNodeWithImageNamed:@"Actividad1"];
     title.position = CGPointMake(self.size.width/2 - 20, 700);
@@ -179,9 +184,7 @@
 }
 -(void) drawLines{
     
-    CGMutablePathRef pathToDraw = CGPathCreateMutable();
     CGMutablePathRef pathToDraw1 = CGPathCreateMutable();
-
 
     //Primera memoria
     
@@ -325,12 +328,11 @@
     [self addChild:line4_3];
     
     line4_4 = [[SKShapeNode alloc] init];
-    CGPathMoveToPoint(pathToDraw, NULL, 839,90);
-    CGPathAddLineToPoint(pathToDraw, NULL, 839,108);
-    line4_4.path = pathToDraw;
+    CGPathMoveToPoint(pathToDraw4, NULL, 839,90);
+    CGPathAddLineToPoint(pathToDraw4, NULL, 839,108);
+    line4_4.path = pathToDraw4;
     [line4_4 setLineWidth: 2.0];
-    line4_4.strokeColor = [UIColor blackColor];
-   // [line4_4 setStrokeColor:[UIColor blackColor]];
+    //line4_4.strokeColor = [UIColor blackColor];
     [self addChild:line4_4];
     
 }
@@ -480,7 +482,7 @@
             
         }else{
             SKAction *actionMoveX = [SKAction moveToX:150 duration:1.0];
-            SKAction *actionMoveY = [SKAction moveToY:500 duration:1.0];
+            SKAction *actionMoveY = [SKAction moveToY:400 duration:1.0];
             [mem_2 runAction:[SKAction group:@[actionMoveY, actionMoveX]]];
         }
         
@@ -508,7 +510,7 @@
             
         }else{
             SKAction *actionMoveX = [SKAction moveToX:150 duration:1.0];
-            SKAction *actionMoveY = [SKAction moveToY:500 duration:1.0];
+            SKAction *actionMoveY = [SKAction moveToY:300 duration:1.0];
             [mem_3 runAction:[SKAction group:@[actionMoveY, actionMoveX]]];
         }
         
@@ -536,7 +538,7 @@
             
         }else{
             SKAction *actionMoveX = [SKAction moveToX:150 duration:1.0];
-            SKAction *actionMoveY = [SKAction moveToY:500 duration:1.0];
+            SKAction *actionMoveY = [SKAction moveToY:200 duration:1.0];
             [mem_4 runAction:[SKAction group:@[actionMoveY, actionMoveX]]];
         }
         
