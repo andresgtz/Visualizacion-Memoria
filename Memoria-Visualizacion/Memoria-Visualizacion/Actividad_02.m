@@ -1,20 +1,15 @@
 //
-//  Actividades.m
+//  Actividad_02.m
 //  Memoria-Visualizacion
 //
-//  Created by Enrique O Hernandez on 4/15/15.
+//  Created by Enrique O Hernandez on 4/23/15.
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "Scene00.h"
-#import "Capitulos.h"
-#import "Actividades.h"
-#import "Actividad_01.h"
 #import "Actividad_02.h"
-@import AVFoundation;
+#import "Scene00.h"
 
-@implementation Actividades
+@implementation Actividad_02
 {
     SKSpriteNode *btn_act1;
     SKSpriteNode *btn_act2;
@@ -23,6 +18,9 @@
     SKSpriteNode *leftButton;
     SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
+    NSMutableArray *_wayPoints;
+    //http://www.raywenderlich.com/61289/how-to-make-a-line-drawing-game-with-sprite-kit
+    
 }
 
 -(id)initWithSize:(CGSize)size
@@ -30,15 +28,16 @@
     if(self=[super initWithSize:size]){
         
         
-        self.backgroundColor = [SKColor blueColor];
+        self.backgroundColor = [SKColor whiteColor];
         
         [self setUpFooter];
-        [self setupBotones];
+        //[self setupBotones];
         //[self setUpInitialText];
         
     }
     return self;
 }
+
 
 -(void)setUpFooter
 {
@@ -61,15 +60,6 @@
 }
 - (void)setupBotones
 {
-    
-    btn_act1 = [SKSpriteNode spriteNodeWithImageNamed:@"actividad_1"];
-    btn_act1.position = CGPointMake(500,650);
-    [self addChild:btn_act1];
-    
-    btn_act2 = [SKSpriteNode spriteNodeWithImageNamed:@"actividad_2"];
-    btn_act2.position = CGPointMake(500,500);
-    [self addChild:btn_act2];
-   
     
     
 }
@@ -113,6 +103,7 @@
 #pragma mark -
 #pragma mark Touch Events
 
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //boton de next scene
@@ -120,6 +111,8 @@
     //SKNode *startButton = [self childNodeWithName:@"buttonStart"];
     
     /* Called when a touch begins */
+
+    
     for (UITouch *touch in touches)
     {
         CGPoint location = [touch locationInNode:self];
@@ -128,19 +121,6 @@
         {
             Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
-            [self.view presentScene:scene transition:sceneTransition];
-        }
-        //scene Actividad 1
-        else if([btn_act1 containsPoint:location])
-        {
-            Actividad_01 *scene = [[Actividad_01 alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition flipVerticalWithDuration:1]; //[SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
-            [self.view presentScene:scene transition:sceneTransition];
-        }
-        else if([btn_act2 containsPoint:location])
-        {
-            Actividad_02 *scene = [[Actividad_02 alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition flipVerticalWithDuration:1]; //[SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
         
@@ -152,8 +132,7 @@
 
 -(void)update:(CFTimeInterval)currentTime
 {
-    
-}
 
+}
 
 @end

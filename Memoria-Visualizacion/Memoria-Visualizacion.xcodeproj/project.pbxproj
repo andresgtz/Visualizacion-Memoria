@@ -66,6 +66,7 @@
 		1B86B9FB1ADF280E00782F2F /* start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9F31ADF280E00782F2F /* start@2x.png */; };
 		1B86B9FE1ADF2AF700782F2F /* background_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9FC1ADF2AF700782F2F /* background_main.png */; };
 		1B86B9FF1ADF2AF700782F2F /* background_main@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9FD1ADF2AF700782F2F /* background_main@2x.png */; };
+		1BE0278C1AE9E3A700EE3500 /* Actividad_02.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */; };
 		F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */ = {isa = PBXBuildFile; fileRef = F0205C381ADF24EF00F56196 /* sistema_memoria.png */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +162,8 @@
 		1B86B9F31ADF280E00782F2F /* start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start@2x.png"; sourceTree = "<group>"; };
 		1B86B9FC1ADF2AF700782F2F /* background_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_main.png; sourceTree = "<group>"; };
 		1B86B9FD1ADF2AF700782F2F /* background_main@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_main@2x.png"; sourceTree = "<group>"; };
+		1BE0278A1AE9E3A700EE3500 /* Actividad_02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actividad_02.h; sourceTree = "<group>"; };
+		1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actividad_02.m; sourceTree = "<group>"; };
 		F0205C381ADF24EF00F56196 /* sistema_memoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sistema_memoria.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,6 +267,8 @@
 				1B86B9EB1ADF210900782F2F /* Actividades.h */,
 				1B462BA61AE8604C00F600F0 /* Actividad_01.h */,
 				1B462BA71AE8604C00F600F0 /* Actividad_01.m */,
+				1BE0278A1AE9E3A700EE3500 /* Actividad_02.h */,
+				1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */,
 				1B86B9E61ADF20DA00782F2F /* Capitulos.m */,
 				1B86B9E81ADF20E600782F2F /* Capitulos.h */,
 				1B4632C01ADF36C60012ABEB /* Cap01_Intro.h */,
@@ -494,6 +499,7 @@
 				1B4632D21ADF38260012ABEB /* Cap01_Resumen.m in Sources */,
 				1B4632CF1ADF38010012ABEB /* Cap01_SistMemoria.m in Sources */,
 				1B462BD11AE87E7900F600F0 /* SKEmitterNode+SKTExtras.m in Sources */,
+				1BE0278C1AE9E3A700EE3500 /* Actividad_02.m in Sources */,
 				1B0E49AF1ADDDF92002A888B /* AppDelegate.m in Sources */,
 				1B0E49B21ADDDF92002A888B /* GameScene.m in Sources */,
 				1B0E49AC1ADDDF92002A888B /* main.m in Sources */,
