@@ -70,7 +70,7 @@
     btn_intro.position = CGPointMake(500,650);
     [self addChild:btn_intro];
     
-    btn_mem_ram = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_ram"];
+    btn_mem_ram = [SKSpriteNode spriteNodeWithImageNamed:@"btn_memoria_ram"];
     btn_mem_ram.position = CGPointMake(500,550);
     [self addChild:btn_mem_ram];
     

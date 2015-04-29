@@ -6,18 +6,19 @@
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
 
-#import "Cap01_MemRAM.h"
 #import "Cap01_MemRAM_2.h"
+#import "Cap01_MemRAM.h"
 #import "Scene00.h"
 #import "Capitulos.h"
 
-@implementation Cap01_MemRAM
+@implementation Cap01_MemRAM_2
 {
     //footer
     SKSpriteNode *leftButton;
     SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
     UITextView *textView;
+    SKSpriteNode *diagrama;
 }
 
 
@@ -30,6 +31,7 @@
         
         [self setUpFooter];
         [self setUpInitialText];
+        [self setUpImages];
         
     }
     return self;
@@ -64,12 +66,24 @@
     [self addChild:contenido];
     
     SKLabelNode *pag = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    pag.text = @"1/2";
+    pag.text = @"2/2";
     pag.fontSize = 36.0;
     pag.fontColor = [UIColor blackColor];
     pag.position = CGPointMake(self.size.width - 50, 100);
     [self addChild:pag];
 }
+
+-(void)setUpImages{
+    
+    diagrama = [SKSpriteNode spriteNodeWithImageNamed:@"diagrama_ram"];
+    diagrama.position = CGPointMake(500,200);
+    
+    [self addChild:diagrama];
+    
+    
+    
+}
+
 
 - (void)didMoveToView:(SKView *)view
 {
@@ -78,7 +92,7 @@
     textView.textColor = [UIColor blackColor];
     textView.font = [UIFont systemFontOfSize:17.0];
     textView.backgroundColor = [UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:0.0f];
-    textView.text = @"Al igual que una memoria ROM, la memoria RAM puede ser considerada como un conjunto de posiciones de memoria, solo que en cada una de éstas se puede leer información y también se puede escribir. Cada una de estas posiciones de memoria se identifica por una dirección única, la cual recibe el nombre de palabra. En cada palabra se puede leer o almacenar un número fijo de bits, los cuales pueden representar una instrucción o dato.El número de palabras que contiene una memoria siempre es una potencia de 2. Además existen varias abreviaciones para indicar algunas potencias de 2, la letra K (de Kilo) equivale a 210 =1,024 palabras, la letra M (de Mega) equivale a 220 = 1,048,576 palabras, la letra G (de Giga) equivale a 230 = 1,073,741,824 palabras y la letra T (de Tera) equivale a 240 palabras.";
+    textView.text = @"Una memoria RAM tiene como entradas; un bus de direcciones, para especificar la palabra con la cual se desea trabajar, y dos líneas de control; un para habilitar o deshabilitar la memoria, llamada selector de circuito o habilitador del circuito y la otra para indicar si se desea realizar una lectura o una escritura llamada R/W (del inglés Read/Write, se usa W para indicar que la operación de escritura se realiza cuando en esta línea se tiene un cero. ). Además cuenta con un bus de datos el cual es normalmente bidireccional, se comporta como bus de entrada en la operación de escritura y como bus de salida en las operación de lectura. La principal razón de este bus bidireccional es reducir el número de conexiones externas en el circuito integrado. La figura 18.1 ejemplifica una memoria RAM de n líneas en el bus de dirección y de m líneas en el bus de datos.";
     
     
     [self.scene.view addSubview:textView];
@@ -92,9 +106,8 @@
 
 - (void)willMoveFromView:(SKView *)view
 {
-    [textView removeFromSuperview];
     [super willMoveFromView:view];
-    
+    [textView removeFromSuperview];
     
 }
 
@@ -145,11 +158,7 @@
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }else if([leftButton containsPoint:location]){
-            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
-            [self.view presentScene:scene transition:sceneTransition];
-        }else if([rightButton containsPoint:location]){
-             Cap01_MemRAM_2 *scene = [[Cap01_MemRAM_2 alloc] initWithSize:self.size];
+            Cap01_MemRAM *scene = [[Cap01_MemRAM alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }
