@@ -15,7 +15,7 @@
 {
     //footer
     SKSpriteNode *leftButton;
-    SKSpriteNode *rightButton;
+    //SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
     UITextView *textView;
     SKSpriteNode *diagrama;
@@ -46,11 +46,11 @@
     leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
     leftButton.position = CGPointMake(38, 38);
     [self addChild:leftButton];
-    
+    /*
     rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
     rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
     [self addChild:rightButton];
-    
+    */
     startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
@@ -88,6 +88,7 @@
 - (void)didMoveToView:(SKView *)view
 {
     textView = [[UITextView alloc] initWithFrame:CGRectMake(self.size.width/2, self.size.height/2+20, 700, 400)];
+    textView.editable = NO;
     textView.center = self.view.center;
     textView.textColor = [UIColor blackColor];
     textView.font = [UIFont systemFontOfSize:17.0];

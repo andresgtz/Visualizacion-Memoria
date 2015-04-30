@@ -67,9 +67,18 @@
 		1B86B9FE1ADF2AF700782F2F /* background_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9FC1ADF2AF700782F2F /* background_main.png */; };
 		1B86B9FF1ADF2AF700782F2F /* background_main@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B86B9FD1ADF2AF700782F2F /* background_main@2x.png */; };
 		1BE0278C1AE9E3A700EE3500 /* Actividad_02.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */; };
+		F00E2CBB1AF1FE4E009EB0A2 /* Cap01_MemRAM_NxM_2.m in Sources */ = {isa = PBXBuildFile; fileRef = F00E2CBA1AF1FE4E009EB0A2 /* Cap01_MemRAM_NxM_2.m */; };
+		F00E2CBD1AF1FF5F009EB0A2 /* diagrama_nm.png in Resources */ = {isa = PBXBuildFile; fileRef = F00E2CBC1AF1FF5F009EB0A2 /* diagrama_nm.png */; };
+		F00E2CC11AF20209009EB0A2 /* diagrama_sis.png in Resources */ = {isa = PBXBuildFile; fileRef = F00E2CC01AF20209009EB0A2 /* diagrama_sis.png */; };
+		F00E2CC41AF20256009EB0A2 /* Cap01_SistMemoria_2.m in Sources */ = {isa = PBXBuildFile; fileRef = F00E2CC31AF20256009EB0A2 /* Cap01_SistMemoria_2.m */; };
+		F00E2CC81AF203D3009EB0A2 /* diagrama_sis2.png in Resources */ = {isa = PBXBuildFile; fileRef = F00E2CC71AF203D3009EB0A2 /* diagrama_sis2.png */; };
+		F00E2CCB1AF2051D009EB0A2 /* Cap01_SistMemoria_3.m in Sources */ = {isa = PBXBuildFile; fileRef = F00E2CCA1AF2051D009EB0A2 /* Cap01_SistMemoria_3.m */; };
 		F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */ = {isa = PBXBuildFile; fileRef = F0205C381ADF24EF00F56196 /* sistema_memoria.png */; };
 		F04FAE401AF19DEF0035A50E /* Cap01_MemRAM_2.m in Sources */ = {isa = PBXBuildFile; fileRef = F04FAE3F1AF19DEF0035A50E /* Cap01_MemRAM_2.m */; };
 		F04FAE441AF1A57B0035A50E /* diagrama_ram.png in Resources */ = {isa = PBXBuildFile; fileRef = F04FAE431AF1A57B0035A50E /* diagrama_ram.png */; };
+		F04FAE471AF1F93A0035A50E /* Cap01_CelBin_2.m in Sources */ = {isa = PBXBuildFile; fileRef = F04FAE461AF1F93A0035A50E /* Cap01_CelBin_2.m */; };
+		F04FAE4A1AF1FA610035A50E /* Cap01_CelBin_3.m in Sources */ = {isa = PBXBuildFile; fileRef = F04FAE491AF1FA610035A50E /* Cap01_CelBin_3.m */; };
+		F04FAE4C1AF1FC7D0035A50E /* diagrama_celbin.png in Resources */ = {isa = PBXBuildFile; fileRef = F04FAE4B1AF1FC7D0035A50E /* diagrama_celbin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,10 +175,24 @@
 		1B86B9FD1ADF2AF700782F2F /* background_main@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_main@2x.png"; sourceTree = "<group>"; };
 		1BE0278A1AE9E3A700EE3500 /* Actividad_02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actividad_02.h; sourceTree = "<group>"; };
 		1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actividad_02.m; sourceTree = "<group>"; };
+		F00E2CB91AF1FE4E009EB0A2 /* Cap01_MemRAM_NxM_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cap01_MemRAM_NxM_2.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_MemRAM_NxM_2.h"; sourceTree = "<group>"; };
+		F00E2CBA1AF1FE4E009EB0A2 /* Cap01_MemRAM_NxM_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cap01_MemRAM_NxM_2.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_MemRAM_NxM_2.m"; sourceTree = "<group>"; };
+		F00E2CBC1AF1FF5F009EB0A2 /* diagrama_nm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diagrama_nm.png; sourceTree = "<group>"; };
+		F00E2CC01AF20209009EB0A2 /* diagrama_sis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diagrama_sis.png; sourceTree = "<group>"; };
+		F00E2CC21AF20256009EB0A2 /* Cap01_SistMemoria_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cap01_SistMemoria_2.h; sourceTree = "<group>"; };
+		F00E2CC31AF20256009EB0A2 /* Cap01_SistMemoria_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cap01_SistMemoria_2.m; sourceTree = "<group>"; };
+		F00E2CC71AF203D3009EB0A2 /* diagrama_sis2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diagrama_sis2.png; sourceTree = "<group>"; };
+		F00E2CC91AF2051D009EB0A2 /* Cap01_SistMemoria_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cap01_SistMemoria_3.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_SistMemoria_3.h"; sourceTree = "<group>"; };
+		F00E2CCA1AF2051D009EB0A2 /* Cap01_SistMemoria_3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cap01_SistMemoria_3.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_SistMemoria_3.m"; sourceTree = "<group>"; };
 		F0205C381ADF24EF00F56196 /* sistema_memoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sistema_memoria.png; sourceTree = "<group>"; };
 		F04FAE3E1AF19DEF0035A50E /* Cap01_MemRAM_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cap01_MemRAM_2.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_MemRAM_2.h"; sourceTree = "<group>"; };
 		F04FAE3F1AF19DEF0035A50E /* Cap01_MemRAM_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cap01_MemRAM_2.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_MemRAM_2.m"; sourceTree = "<group>"; };
 		F04FAE431AF1A57B0035A50E /* diagrama_ram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diagrama_ram.png; sourceTree = "<group>"; };
+		F04FAE451AF1F93A0035A50E /* Cap01_CelBin_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cap01_CelBin_2.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_CelBin_2.h"; sourceTree = "<group>"; };
+		F04FAE461AF1F93A0035A50E /* Cap01_CelBin_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cap01_CelBin_2.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_CelBin_2.m"; sourceTree = "<group>"; };
+		F04FAE481AF1FA610035A50E /* Cap01_CelBin_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cap01_CelBin_3.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_CelBin_3.h"; sourceTree = "<group>"; };
+		F04FAE491AF1FA610035A50E /* Cap01_CelBin_3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cap01_CelBin_3.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Cap01_CelBin_3.m"; sourceTree = "<group>"; };
+		F04FAE4B1AF1FC7D0035A50E /* diagrama_celbin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diagrama_celbin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +295,8 @@
 				1B86B9EB1ADF210900782F2F /* Actividades.h */,
 				1B462BA61AE8604C00F600F0 /* Actividad_01.h */,
 				1B462BA71AE8604C00F600F0 /* Actividad_01.m */,
+				F00E2CC21AF20256009EB0A2 /* Cap01_SistMemoria_2.h */,
+				F00E2CC31AF20256009EB0A2 /* Cap01_SistMemoria_2.m */,
 				1BE0278A1AE9E3A700EE3500 /* Actividad_02.h */,
 				1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */,
 				1B86B9E61ADF20DA00782F2F /* Capitulos.m */,
@@ -282,6 +307,8 @@
 				1B4632C51ADF37520012ABEB /* Cap01_MemRAM.m */,
 				1B4632C71ADF376F0012ABEB /* Cap01_CelBin.h */,
 				1B4632C81ADF376F0012ABEB /* Cap01_CelBin.m */,
+				F04FAE481AF1FA610035A50E /* Cap01_CelBin_3.h */,
+				F04FAE491AF1FA610035A50E /* Cap01_CelBin_3.m */,
 				1B4632CA1ADF37E30012ABEB /* Cap01_MemRAM_NxM.h */,
 				1B4632CB1ADF37E30012ABEB /* Cap01_MemRAM_NxM.m */,
 				1B4632CD1ADF38010012ABEB /* Cap01_SistMemoria.h */,
@@ -290,6 +317,12 @@
 				1B4632D11ADF38260012ABEB /* Cap01_Resumen.m */,
 				F04FAE3E1AF19DEF0035A50E /* Cap01_MemRAM_2.h */,
 				F04FAE3F1AF19DEF0035A50E /* Cap01_MemRAM_2.m */,
+				F04FAE451AF1F93A0035A50E /* Cap01_CelBin_2.h */,
+				F04FAE461AF1F93A0035A50E /* Cap01_CelBin_2.m */,
+				F00E2CB91AF1FE4E009EB0A2 /* Cap01_MemRAM_NxM_2.h */,
+				F00E2CBA1AF1FE4E009EB0A2 /* Cap01_MemRAM_NxM_2.m */,
+				F00E2CC91AF2051D009EB0A2 /* Cap01_SistMemoria_3.h */,
+				F00E2CCA1AF2051D009EB0A2 /* Cap01_SistMemoria_3.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -297,6 +330,10 @@
 		1B0E49D81ADDDFB5002A888B /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				F04FAE4B1AF1FC7D0035A50E /* diagrama_celbin.png */,
+				F00E2CBC1AF1FF5F009EB0A2 /* diagrama_nm.png */,
+				F00E2CC71AF203D3009EB0A2 /* diagrama_sis2.png */,
+				F00E2CC01AF20209009EB0A2 /* diagrama_sis.png */,
 				F04FAE431AF1A57B0035A50E /* diagrama_ram.png */,
 				1B462BB51AE86E7900F600F0 /* Actividad1 */,
 				1B86B9EC1ADF280E00782F2F /* button_left.png */,
@@ -451,8 +488,10 @@
 				1B0E49EC1ADDE9EA002A888B /* celda_binaria.png in Resources */,
 				1B86B9F81ADF280E00782F2F /* footer.png in Resources */,
 				F04FAE441AF1A57B0035A50E /* diagrama_ram.png in Resources */,
+				F04FAE4C1AF1FC7D0035A50E /* diagrama_celbin.png in Resources */,
 				1B462BB21AE86E7600F600F0 /* box.png in Resources */,
 				1B86B9FB1ADF280E00782F2F /* start@2x.png in Resources */,
+				F00E2CBD1AF1FF5F009EB0A2 /* diagrama_nm.png in Resources */,
 				1B86B9FE1ADF2AF700782F2F /* background_main.png in Resources */,
 				1B0E49BF1ADDDF92002A888B /* LaunchScreen.xib in Resources */,
 				1B0E49ED1ADDE9EA002A888B /* Introduccion.png in Resources */,
@@ -460,6 +499,7 @@
 				1B0E49E81ADDE9EA002A888B /* actividad_2.png in Resources */,
 				1B0E49BC1ADDDF92002A888B /* Images.xcassets in Resources */,
 				1B462BBB1AE8732F00F600F0 /* memoria_act1.png in Resources */,
+				F00E2CC11AF20209009EB0A2 /* diagrama_sis.png in Resources */,
 				F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */,
 				1B0E49E91ADDE9EA002A888B /* actividad_3.png in Resources */,
 				1B0E49B41ADDDF92002A888B /* GameScene.sks in Resources */,
@@ -473,6 +513,7 @@
 				1B0E49EB1ADDE9EA002A888B /* capitulos.png in Resources */,
 				1B0E49F01ADDE9EA002A888B /* resumen.png in Resources */,
 				1B86B9FF1ADF2AF700782F2F /* background_main@2x.png in Resources */,
+				F00E2CC81AF203D3009EB0A2 /* diagrama_sis2.png in Resources */,
 				1B462BB91AE871AC00F600F0 /* Memoria.png in Resources */,
 				1B0E49EF1ADDE9EA002A888B /* btn_memoria_ram.png in Resources */,
 				1B86B9F41ADF280E00782F2F /* button_left.png in Resources */,
@@ -502,12 +543,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B4632C61ADF37520012ABEB /* Cap01_MemRAM.m in Sources */,
+				F00E2CC41AF20256009EB0A2 /* Cap01_SistMemoria_2.m in Sources */,
+				F04FAE4A1AF1FA610035A50E /* Cap01_CelBin_3.m in Sources */,
 				1B4632BF1ADF36B80012ABEB /* Cap01_Intro.m in Sources */,
 				1B462BA81AE8604C00F600F0 /* Actividad_01.m in Sources */,
 				1B0E49B71ADDDF92002A888B /* GameViewController.m in Sources */,
 				1B4632D21ADF38260012ABEB /* Cap01_Resumen.m in Sources */,
 				1B4632CF1ADF38010012ABEB /* Cap01_SistMemoria.m in Sources */,
 				1B462BD11AE87E7900F600F0 /* SKEmitterNode+SKTExtras.m in Sources */,
+				F04FAE471AF1F93A0035A50E /* Cap01_CelBin_2.m in Sources */,
 				1BE0278C1AE9E3A700EE3500 /* Actividad_02.m in Sources */,
 				1B0E49AF1ADDDF92002A888B /* AppDelegate.m in Sources */,
 				1B0E49B21ADDDF92002A888B /* GameScene.m in Sources */,
@@ -515,11 +559,13 @@
 				1B4632C91ADF376F0012ABEB /* Cap01_CelBin.m in Sources */,
 				1B86B9EA1ADF20FA00782F2F /* Actividades.m in Sources */,
 				1B4632CC1ADF37E30012ABEB /* Cap01_MemRAM_NxM.m in Sources */,
+				F00E2CCB1AF2051D009EB0A2 /* Cap01_SistMemoria_3.m in Sources */,
 				1B462BD31AE87E7900F600F0 /* SKTAudio.m in Sources */,
 				1B462BD21AE87E7900F600F0 /* SKNode+SKTExtras.m in Sources */,
 				1B462BD01AE87E7900F600F0 /* SKAction+SKTExtras.m in Sources */,
 				1B86B9E71ADF20DA00782F2F /* Capitulos.m in Sources */,
 				F04FAE401AF19DEF0035A50E /* Cap01_MemRAM_2.m in Sources */,
+				F00E2CBB1AF1FE4E009EB0A2 /* Cap01_MemRAM_NxM_2.m in Sources */,
 				1B462BD41AE87E7900F600F0 /* SKTUtils.mm in Sources */,
 				1B0E49D71ADDDFB0002A888B /* Scene00.m in Sources */,
 			);

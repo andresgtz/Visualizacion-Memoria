@@ -1,22 +1,21 @@
 //
-//  Cap01_MemRAM_NxM.m
+//  Cap01_CelBin_3.m
 //  Memoria-Visualizacion
 //
-//  Created by Enrique O Hernandez on 4/15/15.
+//  Created by Jesus on 4/30/15.
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
 
-#import "Cap01_MemRAM_NxM.h"
+#import "Cap01_CelBin_3.h"
 #import "Scene00.h"
 #import "Capitulos.h"
-#import "Cap01_MemRAM_NxM_2.h"
+#import "Cap01_CelBin_2.h"
 
-
-@implementation Cap01_MemRAM_NxM
+@implementation Cap01_CelBin_3
 {
     //footer
     SKSpriteNode *leftButton;
-    SKSpriteNode *rightButton;
+    //SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
     UITextView *textView;
     SKSpriteNode *diagrama;
@@ -47,11 +46,11 @@
     leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
     leftButton.position = CGPointMake(38, 38);
     [self addChild:leftButton];
-    
+    /*
     rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
     rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
     [self addChild:rightButton];
-    
+    */
     startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
@@ -60,24 +59,23 @@
 -(void)setUpInitialText
 {
     SKLabelNode *contenido = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    contenido.text = @"Memoria RAM NxM";
+    contenido.text = @"Celdas Binarias";
     contenido.fontSize = 36.0;
     contenido.fontColor = [UIColor blackColor];
     contenido.position = CGPointMake(500, 600);
     [self addChild:contenido];
     
     SKLabelNode *pag = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    pag.text = @"1/2";
+    pag.text = @"3/3";
     pag.fontSize = 36.0;
     pag.fontColor = [UIColor blackColor];
     pag.position = CGPointMake(self.size.width - 50, 100);
     [self addChild:pag];
 }
-
 -(void)setUpImages{
     
-    diagrama = [SKSpriteNode spriteNodeWithImageNamed:@"diagrama_nm"];
-    diagrama.position = CGPointMake(500,200);
+    diagrama = [SKSpriteNode spriteNodeWithImageNamed:@"diagrama_celbin"];
+    diagrama.position = CGPointMake(500,300);
     
     [self addChild:diagrama];
     
@@ -93,7 +91,7 @@
     textView.textColor = [UIColor blackColor];
     textView.font = [UIFont systemFontOfSize:17.0];
     textView.backgroundColor = [UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:0.0f];
-    textView.text = @"La construcción interna de una memoria RAM de 2n palabras de m bits básicamente consta de un decodificador de n X 2n y de 2n X m celdas binarias. La construcción lógica de un RAM pequeño se muestra en la figura 18.4. Esta memoria cuenta con 4 palabras de 4 bits. Para seleccionar una de las cuatro palabras se requiere de un bus de direcciones de 2 líneas, las cuales entran al decodificador. Al estar habilitado el decodificador seleccionará las celdas binarias de una de las cuatro palabras, dependiendo del contenido en el bus de direcciones. Si la operación que se desea realizar es una escritura, se pone en la línea de R/W un 0 y las celdas binarias seleccionadas guardaran los bits que se encuentra en el bus de entrada. Para realizar una operación de lectura, se pone en la línea de R/W un 1, lo que hace que los bits de las celdas binarias seleccionadas pasen por los bloques ORs al bus de salida. Las celdas binarias de las palabras no seleccionadas mantienen su contenido.";
+    textView.text = @"EAl ser la celda binaria dinámica más sencilla en su construcción se pueden tener circuitos integrados con mayor capacidad y menor consumo de energía, su principal desventaja es que tienen un mayor tiempo de acceso. El funcionamiento lógico de una celda binaria estática o dinámica es el mismo, la figura 18.2 muestra la lógica equivalente de una celda binaria.";
     
     
     [self.scene.view addSubview:textView];
@@ -160,15 +158,10 @@
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }else if([leftButton containsPoint:location]){
-            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
-            [self.view presentScene:scene transition:sceneTransition];
-        }else if([rightButton containsPoint:location]){
-            Cap01_MemRAM_NxM_2 *scene = [[Cap01_MemRAM_NxM_2 alloc] initWithSize:self.size];
+            Cap01_CelBin_2 *scene = [[Cap01_CelBin_2 alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }
-        
     }
 }
 

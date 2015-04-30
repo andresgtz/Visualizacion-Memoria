@@ -74,6 +74,7 @@
 - (void)didMoveToView:(SKView *)view
 {
     textView = [[UITextView alloc] initWithFrame:CGRectMake(self.size.width/2, self.size.height/2+20, 700, 400)];
+    textView.editable = NO;
     textView.center = self.view.center;
     textView.textColor = [UIColor blackColor];
     textView.font = [UIFont systemFontOfSize:17.0];

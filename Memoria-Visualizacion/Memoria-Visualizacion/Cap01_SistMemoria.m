@@ -8,6 +8,9 @@
 
 #import "Cap01_SistMemoria.h"
 #import "Scene00.h"
+#import "Capitulos.h"
+#import "Cap01_SistMemoria_2.h"
+
 
 @implementation Cap01_SistMemoria
 {
@@ -15,6 +18,8 @@
     SKSpriteNode *leftButton;
     SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
+    UITextView *textView;
+    SKSpriteNode *diagrama;
 }
 
 
@@ -23,10 +28,11 @@
     if(self=[super initWithSize:size]){
         
         
-        self.backgroundColor = [SKColor orangeColor];
+        self.backgroundColor=[UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:1.0f];
         
         [self setUpFooter];
         [self setUpInitialText];
+        [self setUpImages];
         
     }
     return self;
@@ -53,16 +59,57 @@
 }
 -(void)setUpInitialText
 {
-    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    label.text = @"Sitema Memoria!";
-    label.fontSize = 20.0;
-    label.fontColor = [UIColor whiteColor];
-    label.position = CGPointMake(400, 400);
-    [self addChild:label];
+    SKLabelNode *contenido = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    contenido.text = @"Sistemas de memoria";
+    contenido.fontSize = 36.0;
+    contenido.fontColor = [UIColor blackColor];
+    contenido.position = CGPointMake(500, 600);
+    [self addChild:contenido];
+    
+    SKLabelNode *pag = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    pag.text = @"1/3";
+    pag.fontSize = 36.0;
+    pag.fontColor = [UIColor blackColor];
+    pag.position = CGPointMake(self.size.width - 50, 100);
+    [self addChild:pag];
+}
+
+-(void)setUpImages{
+    
+    diagrama = [SKSpriteNode spriteNodeWithImageNamed:@"diagrama_sis"];
+    diagrama.position = CGPointMake(500,300);
+    
+    [self addChild:diagrama];
+    
+    
+    
+}
+
+- (void)didMoveToView:(SKView *)view
+{
+    textView = [[UITextView alloc] initWithFrame:CGRectMake(self.size.width/2, self.size.height/2+20, 700, 400)];
+    textView.editable = NO;
+    textView.center = self.view.center;
+    textView.textColor = [UIColor blackColor];
+    textView.font = [UIFont systemFontOfSize:17.0];
+    textView.backgroundColor = [UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:0.0f];
+    textView.text = @"Con frecuencia se usan varios circuitos de memoria para formar memorias más grandes, puede ser que se quiera una memoria con más palabras o una memoria que contenga con un tamaño de palabra mayor. Suponga que se tienen varios circuitos de memoria de 1K palabras de 8 bits como el mostrado en la figura18.7.";
+    
+    
+    [self.scene.view addSubview:textView];
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationCurveEaseInOut  animations:^{
+        textView.alpha = 1.0f;
+        
+    }completion: nil];
+    
+    
 }
 
 - (void)willMoveFromView:(SKView *)view
 {
+    [textView removeFromSuperview];
+    [super willMoveFromView:view];
+    
     
 }
 
@@ -110,9 +157,18 @@
         if([startButton containsPoint:location])
         {
             Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
+            [self.view presentScene:scene transition:sceneTransition];
+        }else if([leftButton containsPoint:location]){
+            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
+            [self.view presentScene:scene transition:sceneTransition];
+        }else if ([rightButton containsPoint:location]){
+            Cap01_SistMemoria_2 *scene = [[Cap01_SistMemoria_2 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }
+        
     }
 }
 
@@ -123,6 +179,5 @@
 {
     
 }
-
 
 @end

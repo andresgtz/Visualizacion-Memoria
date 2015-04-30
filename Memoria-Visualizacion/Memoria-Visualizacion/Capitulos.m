@@ -27,8 +27,8 @@
     SKSpriteNode *btn_resumen;
     
     //footer
-    SKSpriteNode *leftButton;
-    SKSpriteNode *rightButton;
+    //SKSpriteNode *leftButton;
+    //SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
     
 }
@@ -99,6 +99,7 @@
     footer.position = CGPointMake(self.size.width/2, 38);
     [self addChild:footer];
     
+    /*
     leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
     leftButton.position = CGPointMake(38, 38);
     [self addChild:leftButton];
@@ -106,7 +107,8 @@
     rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
     rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
     [self addChild:rightButton];
-    
+    */
+     
     startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
