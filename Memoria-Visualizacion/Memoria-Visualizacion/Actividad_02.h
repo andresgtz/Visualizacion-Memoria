@@ -9,7 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface Actividad_02 : SKScene
-- (CGPathRef)createPathToMove;
+//- (CGPathRef)createPathToMove;
 
 
 @end
