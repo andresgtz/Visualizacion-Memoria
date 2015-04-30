@@ -1,22 +1,21 @@
 //
-//  Cap01_MemRAM_NxM.m
+//  Cap01_MemRAM.m
 //  Memoria-Visualizacion
 //
 //  Created by Enrique O Hernandez on 4/15/15.
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
 
-#import "Cap01_MemRAM_NxM.h"
+#import "Cap01_MemRAM_2.h"
+#import "Cap01_MemRAM.h"
 #import "Scene00.h"
 #import "Capitulos.h"
-#import "Cap01_MemRAM_NxM_2.h"
 
-
-@implementation Cap01_MemRAM_NxM
+@implementation Cap01_MemRAM_2
 {
     //footer
     SKSpriteNode *leftButton;
-    SKSpriteNode *rightButton;
+    //SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
     UITextView *textView;
     SKSpriteNode *diagrama;
@@ -47,11 +46,11 @@
     leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
     leftButton.position = CGPointMake(38, 38);
     [self addChild:leftButton];
-    
+    /*
     rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
     rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
     [self addChild:rightButton];
-    
+    */
     startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
@@ -60,14 +59,14 @@
 -(void)setUpInitialText
 {
     SKLabelNode *contenido = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    contenido.text = @"Memoria RAM NxM";
+    contenido.text = @"Memoria RAM";
     contenido.fontSize = 36.0;
     contenido.fontColor = [UIColor blackColor];
     contenido.position = CGPointMake(500, 600);
     [self addChild:contenido];
     
     SKLabelNode *pag = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    pag.text = @"1/2";
+    pag.text = @"2/2";
     pag.fontSize = 36.0;
     pag.fontColor = [UIColor blackColor];
     pag.position = CGPointMake(self.size.width - 50, 100);
@@ -76,7 +75,7 @@
 
 -(void)setUpImages{
     
-    diagrama = [SKSpriteNode spriteNodeWithImageNamed:@"diagrama_nm"];
+    diagrama = [SKSpriteNode spriteNodeWithImageNamed:@"diagrama_ram"];
     diagrama.position = CGPointMake(500,200);
     
     [self addChild:diagrama];
@@ -84,6 +83,7 @@
     
     
 }
+
 
 - (void)didMoveToView:(SKView *)view
 {
@@ -93,7 +93,7 @@
     textView.textColor = [UIColor blackColor];
     textView.font = [UIFont systemFontOfSize:17.0];
     textView.backgroundColor = [UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:0.0f];
-    textView.text = @"La construcción interna de una memoria RAM de 2n palabras de m bits básicamente consta de un decodificador de n X 2n y de 2n X m celdas binarias. La construcción lógica de un RAM pequeño se muestra en la figura 18.4. Esta memoria cuenta con 4 palabras de 4 bits. Para seleccionar una de las cuatro palabras se requiere de un bus de direcciones de 2 líneas, las cuales entran al decodificador. Al estar habilitado el decodificador seleccionará las celdas binarias de una de las cuatro palabras, dependiendo del contenido en el bus de direcciones. Si la operación que se desea realizar es una escritura, se pone en la línea de R/W un 0 y las celdas binarias seleccionadas guardaran los bits que se encuentra en el bus de entrada. Para realizar una operación de lectura, se pone en la línea de R/W un 1, lo que hace que los bits de las celdas binarias seleccionadas pasen por los bloques ORs al bus de salida. Las celdas binarias de las palabras no seleccionadas mantienen su contenido.";
+    textView.text = @"Una memoria RAM tiene como entradas; un bus de direcciones, para especificar la palabra con la cual se desea trabajar, y dos líneas de control; un para habilitar o deshabilitar la memoria, llamada selector de circuito o habilitador del circuito y la otra para indicar si se desea realizar una lectura o una escritura llamada R/W (del inglés Read/Write, se usa W para indicar que la operación de escritura se realiza cuando en esta línea se tiene un cero. ). Además cuenta con un bus de datos el cual es normalmente bidireccional, se comporta como bus de entrada en la operación de escritura y como bus de salida en las operación de lectura. La principal razón de este bus bidireccional es reducir el número de conexiones externas en el circuito integrado. La figura 18.1 ejemplifica una memoria RAM de n líneas en el bus de dirección y de m líneas en el bus de datos.";
     
     
     [self.scene.view addSubview:textView];
@@ -107,9 +107,8 @@
 
 - (void)willMoveFromView:(SKView *)view
 {
-    [textView removeFromSuperview];
     [super willMoveFromView:view];
-    
+    [textView removeFromSuperview];
     
 }
 
@@ -160,15 +159,10 @@
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }else if([leftButton containsPoint:location]){
-            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
-            [self.view presentScene:scene transition:sceneTransition];
-        }else if([rightButton containsPoint:location]){
-            Cap01_MemRAM_NxM_2 *scene = [[Cap01_MemRAM_NxM_2 alloc] initWithSize:self.size];
+            Cap01_MemRAM *scene = [[Cap01_MemRAM alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }
-        
     }
 }
 

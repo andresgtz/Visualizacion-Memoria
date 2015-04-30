@@ -7,14 +7,17 @@
 //
 #import "Cap01_Intro.h"
 #import "Scene00.h"
+#import "Capitulos.h"
+
 @import AVFoundation;
 
 @implementation Cap01_Intro
 {
     //footer
     SKSpriteNode *leftButton;
-    SKSpriteNode *rightButton;
+    //SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
+    UITextView *textView;
 }
 
 -(id)initWithSize:(CGSize)size
@@ -22,8 +25,8 @@
     if(self=[super initWithSize:size]){
         
         
-        self.backgroundColor = [SKColor redColor];
         
+        self.backgroundColor=[UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:1.0f];
         [self setUpFooter];
         [self setUpInitialText];
         
@@ -41,9 +44,11 @@
     leftButton.position = CGPointMake(38, 38);
     [self addChild:leftButton];
     
+    /*
     rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
     rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
     [self addChild:rightButton];
+    */
     
     startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
@@ -53,17 +58,50 @@
 
 -(void)setUpInitialText
 {
-    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    label.text = @"Introduccion!";
-    label.fontSize = 20.0;
-    label.fontColor = [UIColor whiteColor];
-    label.position = CGPointMake(400, 400);
-    [self addChild:label];
+    SKLabelNode *contenido = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    contenido.text = @"Introduccion";
+    contenido.fontSize = 36.0;
+    contenido.fontColor = [UIColor blackColor];
+    contenido.position = CGPointMake(500, 600);
+    [self addChild:contenido];
+    
+    SKLabelNode *pag = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    pag.text = @"1/1";
+    pag.fontSize = 36.0;
+    pag.fontColor = [UIColor blackColor];
+    pag.position = CGPointMake(self.size.width - 50, 100);
+    [self addChild:pag];
+    
+    
+  
+    
+}
+
+- (void)didMoveToView:(SKView *)view
+{
+    textView = [[UITextView alloc] initWithFrame:CGRectMake(self.size.width/2, self.size.height/2+20, 700, 300)];
+    textView.editable = NO;
+    textView.center = self.view.center;
+    textView.textColor = [UIColor blackColor];
+    textView.font = [UIFont systemFontOfSize:17.0];
+    textView.backgroundColor = [UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:0.0f];
+    textView.text = @"La memoria principal de una computadora de propósito general normalmente está formada en gran parte por circuitos de memoria RAM (del inglés Random Access Memory), y solo una pequeña parte por circuitos de memoria ROM. Originalmente se utilizaba el termino RAM para hacer referencia a memorias de acceso aleatorio, pero ahora se utiliza para identificar a las memorias volátil donde se puede leer y escribir información, y así diferenciarla de una memoria ROM. Nótese que ambas memorias son de acceso aleatorio.";
+    
+    
+    [self.scene.view addSubview:textView];
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationCurveEaseInOut  animations:^{
+        textView.alpha = 1.0f;
+        
+    }completion: nil];
+    
+    
 }
 
 - (void)willMoveFromView:(SKView *)view
 {
-    
+    [super willMoveFromView:view];
+    [textView removeFromSuperview];
+
 }
 
 #pragma mark -
@@ -110,7 +148,11 @@
         if([startButton containsPoint:location])
         {
             Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
+            [self.view presentScene:scene transition:sceneTransition];
+        }else if([leftButton containsPoint:location]){
+            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }
     }

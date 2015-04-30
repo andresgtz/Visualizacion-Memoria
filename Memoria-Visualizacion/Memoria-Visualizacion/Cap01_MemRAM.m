@@ -7,7 +7,9 @@
 //
 
 #import "Cap01_MemRAM.h"
+#import "Cap01_MemRAM_2.h"
 #import "Scene00.h"
+#import "Capitulos.h"
 
 @implementation Cap01_MemRAM
 {
@@ -15,6 +17,7 @@
     SKSpriteNode *leftButton;
     SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
+    UITextView *textView;
 }
 
 
@@ -23,7 +26,7 @@
     if(self=[super initWithSize:size]){
         
         
-        self.backgroundColor = [SKColor yellowColor];
+        self.backgroundColor=[UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:1.0f];
         
         [self setUpFooter];
         [self setUpInitialText];
@@ -53,16 +56,46 @@
 }
 -(void)setUpInitialText
 {
-    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    label.text = @"Memoria Ram!";
-    label.fontSize = 20.0;
-    label.fontColor = [UIColor whiteColor];
-    label.position = CGPointMake(400, 400);
-    [self addChild:label];
+    SKLabelNode *contenido = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    contenido.text = @"Memoria RAM";
+    contenido.fontSize = 36.0;
+    contenido.fontColor = [UIColor blackColor];
+    contenido.position = CGPointMake(500, 600);
+    [self addChild:contenido];
+    
+    SKLabelNode *pag = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    pag.text = @"1/2";
+    pag.fontSize = 36.0;
+    pag.fontColor = [UIColor blackColor];
+    pag.position = CGPointMake(self.size.width - 50, 100);
+    [self addChild:pag];
+}
+
+- (void)didMoveToView:(SKView *)view
+{
+    textView = [[UITextView alloc] initWithFrame:CGRectMake(self.size.width/2, self.size.height/2+20, 700, 400)];
+    textView.editable = NO;
+    textView.center = self.view.center;
+    textView.textColor = [UIColor blackColor];
+    textView.font = [UIFont systemFontOfSize:17.0];
+    textView.backgroundColor = [UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:0.0f];
+    textView.text = @"Al igual que una memoria ROM, la memoria RAM puede ser considerada como un conjunto de posiciones de memoria, solo que en cada una de éstas se puede leer información y también se puede escribir. Cada una de estas posiciones de memoria se identifica por una dirección única, la cual recibe el nombre de palabra. En cada palabra se puede leer o almacenar un número fijo de bits, los cuales pueden representar una instrucción o dato.El número de palabras que contiene una memoria siempre es una potencia de 2. Además existen varias abreviaciones para indicar algunas potencias de 2, la letra K (de Kilo) equivale a 210 =1,024 palabras, la letra M (de Mega) equivale a 220 = 1,048,576 palabras, la letra G (de Giga) equivale a 230 = 1,073,741,824 palabras y la letra T (de Tera) equivale a 240 palabras.";
+    
+    
+    [self.scene.view addSubview:textView];
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationCurveEaseInOut  animations:^{
+        textView.alpha = 1.0f;
+        
+    }completion: nil];
+    
+    
 }
 
 - (void)willMoveFromView:(SKView *)view
 {
+    [textView removeFromSuperview];
+    [super willMoveFromView:view];
+    
     
 }
 
@@ -110,7 +143,15 @@
         if([startButton containsPoint:location])
         {
             Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
+            [self.view presentScene:scene transition:sceneTransition];
+        }else if([leftButton containsPoint:location]){
+            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
+            [self.view presentScene:scene transition:sceneTransition];
+        }else if([rightButton containsPoint:location]){
+             Cap01_MemRAM_2 *scene = [[Cap01_MemRAM_2 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }
     }

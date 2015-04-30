@@ -1,18 +1,19 @@
 //
-//  Cap01_MemRAM_NxM.m
-//  Memoria-Visualizacion
+//  Cap01_SistMemoria_2.m
+//  
 //
-//  Created by Enrique O Hernandez on 4/15/15.
-//  Copyright (c) 2015 NLCJohn. All rights reserved.
+//  Created by Jesus on 4/30/15.
+//
 //
 
-#import "Cap01_MemRAM_NxM.h"
+#import "Cap01_SistMemoria_2.h"
 #import "Scene00.h"
 #import "Capitulos.h"
-#import "Cap01_MemRAM_NxM_2.h"
+#import "Cap01_SistMemoria.h"
+#import "Cap01_SistMemoria_3.h"
 
 
-@implementation Cap01_MemRAM_NxM
+@implementation Cap01_SistMemoria_2
 {
     //footer
     SKSpriteNode *leftButton;
@@ -60,14 +61,14 @@
 -(void)setUpInitialText
 {
     SKLabelNode *contenido = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    contenido.text = @"Memoria RAM NxM";
+    contenido.text = @"Sistemas de memoria";
     contenido.fontSize = 36.0;
     contenido.fontColor = [UIColor blackColor];
     contenido.position = CGPointMake(500, 600);
     [self addChild:contenido];
     
     SKLabelNode *pag = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    pag.text = @"1/2";
+    pag.text = @"2/3";
     pag.fontSize = 36.0;
     pag.fontColor = [UIColor blackColor];
     pag.position = CGPointMake(self.size.width - 50, 100);
@@ -76,7 +77,7 @@
 
 -(void)setUpImages{
     
-    diagrama = [SKSpriteNode spriteNodeWithImageNamed:@"diagrama_nm"];
+    diagrama = [SKSpriteNode spriteNodeWithImageNamed:@"diagrama_sis2"];
     diagrama.position = CGPointMake(500,200);
     
     [self addChild:diagrama];
@@ -93,7 +94,7 @@
     textView.textColor = [UIColor blackColor];
     textView.font = [UIFont systemFontOfSize:17.0];
     textView.backgroundColor = [UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:0.0f];
-    textView.text = @"La construcción interna de una memoria RAM de 2n palabras de m bits básicamente consta de un decodificador de n X 2n y de 2n X m celdas binarias. La construcción lógica de un RAM pequeño se muestra en la figura 18.4. Esta memoria cuenta con 4 palabras de 4 bits. Para seleccionar una de las cuatro palabras se requiere de un bus de direcciones de 2 líneas, las cuales entran al decodificador. Al estar habilitado el decodificador seleccionará las celdas binarias de una de las cuatro palabras, dependiendo del contenido en el bus de direcciones. Si la operación que se desea realizar es una escritura, se pone en la línea de R/W un 0 y las celdas binarias seleccionadas guardaran los bits que se encuentra en el bus de entrada. Para realizar una operación de lectura, se pone en la línea de R/W un 1, lo que hace que los bits de las celdas binarias seleccionadas pasen por los bloques ORs al bus de salida. Las celdas binarias de las palabras no seleccionadas mantienen su contenido.";
+    textView.text = @"La línea de dirección más significativa a10 determina cual de los dos circuitos se selecciona, si esta línea vale cero selecciona el circuito superior, el segundo K de memoria se encuentra en el circuito inferior ya que éste se selecciona cuando a10 vale uno. De las dos líneas de selección solo se necesita una de ellas, la otra se fija a uno o a cero según el caso. Recuerda que el bus de datos es bidirecional y de tres estados por lo cual se pueden juntar las líneas correspondientes en cada uno de circuitos sin producir un corto, ya que solo uno de éstos puede seleccionar a la vez, lo que hace que el otro bus se encuentre en su tercer estado. La figura 18.12 muestra como se pueden interconectar dos circuitos de memoria de 1K palabras de 8 bits para formar una memoria de 1K palabras de 16 bits.";
     
     
     [self.scene.view addSubview:textView];
@@ -160,11 +161,11 @@
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }else if([leftButton containsPoint:location]){
-            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
+            Cap01_SistMemoria *scene = [[Cap01_SistMemoria alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
-        }else if([rightButton containsPoint:location]){
-            Cap01_MemRAM_NxM_2 *scene = [[Cap01_MemRAM_NxM_2 alloc] initWithSize:self.size];
+        }else if ([rightButton containsPoint:location]){
+            Cap01_SistMemoria_3 *scene = [[Cap01_SistMemoria_3 alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }

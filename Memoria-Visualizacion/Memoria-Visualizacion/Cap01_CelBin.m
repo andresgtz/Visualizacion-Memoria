@@ -8,6 +8,8 @@
 
 #import "Cap01_CelBin.h"
 #import "Scene00.h"
+#import "Capitulos.h"
+#import "Cap01_CelBin_2.h"
 
 @implementation Cap01_CelBin
 {
@@ -15,6 +17,7 @@
     SKSpriteNode *leftButton;
     SKSpriteNode *rightButton;
     SKSpriteNode *startButton;
+    UITextView *textView;
 }
 
 
@@ -23,7 +26,7 @@
     if(self=[super initWithSize:size]){
         
         
-        self.backgroundColor = [SKColor greenColor];
+        self.backgroundColor=[UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:1.0f];
         
         [self setUpFooter];
         [self setUpInitialText];
@@ -53,16 +56,46 @@
 }
 -(void)setUpInitialText
 {
-    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    label.text = @"Celdas Binarias!";
-    label.fontSize = 20.0;
-    label.fontColor = [UIColor whiteColor];
-    label.position = CGPointMake(400, 400);
-    [self addChild:label];
+    SKLabelNode *contenido = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    contenido.text = @"Celdas Binarias";
+    contenido.fontSize = 36.0;
+    contenido.fontColor = [UIColor blackColor];
+    contenido.position = CGPointMake(500, 600);
+    [self addChild:contenido];
+    
+    SKLabelNode *pag = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    pag.text = @"1/3";
+    pag.fontSize = 36.0;
+    pag.fontColor = [UIColor blackColor];
+    pag.position = CGPointMake(self.size.width - 50, 100);
+    [self addChild:pag];
+}
+
+- (void)didMoveToView:(SKView *)view
+{
+    textView = [[UITextView alloc] initWithFrame:CGRectMake(self.size.width/2, self.size.height/2+20, 700, 400)];
+    textView.editable = NO;
+    textView.center = self.view.center;
+    textView.textColor = [UIColor blackColor];
+    textView.font = [UIFont systemFontOfSize:17.0];
+    textView.backgroundColor = [UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:0.0f];
+    textView.text = @"Existen dos modos de construir este bloque básico, estático y dinámico.En las memorias RAM estáticas, la celda binaria se construye esencialmente con un LATCH S- R, la información no se pierde mientras el circuito permanece encendido.Las celdas binarias de la memoria RAM dinámica están construidas básicamente por medio de un capacitor que almacena la información y un transistor. El transistor es un dispositivo electrónico que permite cargar o descargar el capacitor, así como poder leer el valor que tiene éste. La carga almacenada en el capacitor tiende a desaparecer al momento de leerla, por lo cual siempre que se lee una celda binaria con valor de uno, debe ser seguida de una operación de escritura de un uno y así restaurar la carga en el capacitor, este operación de escritura la realiza en forma automática los circuitos de control de la RAM.";
+    
+    
+    [self.scene.view addSubview:textView];
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationCurveEaseInOut  animations:^{
+        textView.alpha = 1.0f;
+        
+    }completion: nil];
+    
+    
 }
 
 - (void)willMoveFromView:(SKView *)view
 {
+    [textView removeFromSuperview];
+    [super willMoveFromView:view];
+    
     
 }
 
@@ -110,7 +143,15 @@
         if([startButton containsPoint:location])
         {
             Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
-            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
+            [self.view presentScene:scene transition:sceneTransition];
+        }else if([leftButton containsPoint:location]){
+            Capitulos *scene = [[Capitulos alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
+            [self.view presentScene:scene transition:sceneTransition];
+        }else if([rightButton containsPoint:location]){
+            Cap01_CelBin_2 *scene = [[Cap01_CelBin_2 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
             [self.view presentScene:scene transition:sceneTransition];
         }
     }
