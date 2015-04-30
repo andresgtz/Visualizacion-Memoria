@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4C3E6F64-7D54-4799-A898-F012E5343648</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Memoria-Visualizacion</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>274CA4CF7CCBB7CC36EC6D09F7DF08B4C29C9737</key>
 		<string>https://github.com/andresgtz/Visualizacion-Memoria.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Memoria-Visualizacion/Memoria-Visualizacion.xcodeproj/project.xcworkspace</string>
+	<string>Memoria-Visualizacion/Memoria-Visualizacion.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>274CA4CF7CCBB7CC36EC6D09F7DF08B4C29C9737</key>

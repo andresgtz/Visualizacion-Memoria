@@ -2671,11 +2671,12 @@
 -(void)update:(CFTimeInterval)currentTime
 {
     if((_enLugar >= 8)&& _gameMode8 ){
-        [self setUpInitialText];
+       // [self setUpInitialText];
         
     }
     if ((!_gameMode8) && (_enLugar >= 4)){
-        [self setUpInitialText];
+       // [self setUpInitialText];
+        
     }
     
     if (_touchMemory_1 && (!_inPlace_1))
