@@ -55,11 +55,11 @@
     titulo.position = CGPointMake(520,400);
     [self addChild:titulo];
     
-    capitulos = [SKSpriteNode spriteNodeWithImageNamed:@"capitulos"];
+    capitulos = [SKSpriteNode spriteNodeWithImageNamed:@"Capitulos_2"];
     capitulos.position = CGPointMake(250,200);
     [self addChild:capitulos];
     
-    actividades = [SKSpriteNode spriteNodeWithImageNamed:@"actividades"];
+    actividades = [SKSpriteNode spriteNodeWithImageNamed:@"Actividades_2"];
     actividades.position = CGPointMake(750,200);
     [self addChild:actividades];
 }

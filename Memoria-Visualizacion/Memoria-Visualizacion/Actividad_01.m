@@ -33,8 +33,12 @@
     BOOL _inPlace_6;
     BOOL _inPlace_7;
     BOOL _inPlace_8;
+    
+    BOOL disapear1;
 
     NSInteger _enLugar;
+    
+    NSInteger _address;
 
     CGPoint _touchPoint;
     CGPoint _memoryLoc;
@@ -61,6 +65,8 @@
     SKSpriteNode *decoder;
     SKSpriteNode *instructions;
     SKSpriteNode *lineas;
+    SKSpriteNode *cloud;
+    SKSpriteNode *busDirecciones;
     
     //footer
     SKSpriteNode *leftButton;
@@ -115,6 +121,23 @@
     SKShapeNode *line8_3;
     SKShapeNode *line8_4;
     
+    SKLabelNode *label;
+    SKLabelNode *label23;
+    SKLabelNode *label24;
+    SKLabelNode *label25;
+    SKLabelNode *label26;
+    SKLabelNode *label27;
+    
+    SKLabelNode *labelDatos;
+    SKLabelNode *labelAddress;
+    
+    SKLabelNode *labelAddress1;
+    SKLabelNode *labelAddress2;
+    SKLabelNode *labelAddress3;
+    
+    SKLabelNode *labelMemoriaIns;
+    SKLabelNode *labelMessage;
+    //SKLabelNode *labelDatos;
     
 }
 -(id)initWithSize:(CGSize)size
@@ -135,15 +158,19 @@
         
         _enLugar = 0;
         
+        _address = 0;
+        
         _gameMode8 = YES;
         _memoryLoc = CGPointMake(150, 350);
+        
+        disapear1 = NO;
 
         
         [self setUpFooter];
         [self drawLines];
         [self setUpImages];
         
-      //  [self setUpInitialText];
+       [self setUpInitialText];
         
     }
     return self;
@@ -162,16 +189,19 @@
      [self addChild:lineas];
      */
      
+    busDirecciones = [SKSpriteNode spriteNodeWithImageNamed:@"BusDireccionIns"];
+    busDirecciones.position = CGPointMake(240, 170);
+    [self addChild:busDirecciones];
     
     title = [SKSpriteNode spriteNodeWithImageNamed:@"Actividad1"];
     title.position = CGPointMake(self.size.width/2 - 20, 700);
     [self addChild:title];
     
-    /*
-    instructions = [SKSpriteNode spriteNodeWithImageNamed:@"Act1Ins"];
-    instructions.position = CGPointMake(self.size.width/2 - 20, 625);
+    
+    instructions = [SKSpriteNode spriteNodeWithImageNamed:@"Act_1_ins"];
+    instructions.position = CGPointMake(150, 575);
     [self addChild:instructions];
-     */
+    
     //
     box = [SKSpriteNode spriteNodeWithImageNamed:@"boxMemory"];
     box.position = CGPointMake(150 , 350);
@@ -217,37 +247,95 @@
      
     
     //memoria
-    mem_1 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
-    mem_1.position = _memoryLoc;
-    [self addChild:mem_1];
-    
-    mem_2 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
-    mem_2.position = _memoryLoc;
-    [self addChild:mem_2];
-    
-    mem_3 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
-    mem_3.position = _memoryLoc;
-    [self addChild:mem_3];
-    
-    mem_4 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
-    mem_4.position = _memoryLoc;
-    [self addChild:mem_4];
-    
-    mem_5 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
-    mem_5.position = _memoryLoc;
-    [self addChild:mem_5];
-    
-    mem_6 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
-    mem_6.position = _memoryLoc;
-    [self addChild:mem_6];
+    mem_8 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
+    mem_8.position = _memoryLoc;
+    [self addChild:mem_8];
     
     mem_7 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
     mem_7.position = _memoryLoc;
     [self addChild:mem_7];
     
-    mem_8 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
-    mem_8.position = _memoryLoc;
-    [self addChild:mem_8];
+    mem_6 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
+    mem_6.position = _memoryLoc;
+    [self addChild:mem_6];
+    
+    mem_5 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
+    mem_5.position = _memoryLoc;
+    [self addChild:mem_5];
+    
+    mem_4 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
+    mem_4.position = _memoryLoc;
+    [self addChild:mem_4];
+    
+    mem_3 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
+    mem_3.position = _memoryLoc;
+    [self addChild:mem_3];
+    
+    mem_2 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
+    mem_2.position = _memoryLoc;
+    [self addChild:mem_2];
+    
+    mem_1 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_act1"];
+    mem_1.position = _memoryLoc;
+    [self addChild:mem_1];
+    
+    
+    
+    
+    /**
+     
+     
+     SKAction *actionMoveDown = [SKAction moveToY:600 duration:3.0];
+     SKAction *actionMoveUp = [SKAction moveToY:603 duration:0.25];
+     SKAction *actionMoveDownFast = [SKAction moveToY:600 duration:0.25];
+     
+     //Next story titulo
+     SKAction *wait = [SKAction waitForDuration:0.75];
+     SKAction *showButton = [SKAction runBlock:^{
+     
+     SKSpriteNode *buttonStart = [SKSpriteNode spriteNodeWithImageNamed:@"button_read"];
+     buttonStart.name = @"buttonStart";
+     
+     buttonStart.position = CGPointMake(425,460);
+     [self addChild:buttonStart];
+     
+     [buttonStart runAction:[SKAction playSoundFileNamed:@"thompsonman_pop.wav" waitForCompletion:NO]];
+     }];
+     
+     //correr las animaciones en secuencia. titulo
+     //[bookTitle runAction:[SKAction sequence:@[actionMoveDown, actionMoveUp, actionMoveDownFast]]];
+     [bookTitle runAction:[SKAction sequence:@[actionMoveDown, actionMoveUp, actionMoveDownFast, wait, showButton]]];
+     
+     
+     */
+    
+   
+   // SKAction *disapear =
+    
+    
+    cloud = [SKSpriteNode spriteNodeWithImageNamed:@"Cloud1"];
+    cloud.position = CGPointMake(466, 550);
+    
+   //
+    
+    [self addChild:cloud];
+    SKAction *disapear = [SKAction fadeOutWithDuration:0];
+    SKAction *wait = [SKAction waitForDuration:0.5];
+    SKAction *apear = [SKAction fadeInWithDuration:1];
+    [cloud runAction:[SKAction sequence:@[disapear,wait,apear]]];
+    
+    //[cloud runAction:[SKAction fadeOutWithDuration:4]];
+   // [cloud runAction:[SKAction waitForDuration:1]];
+   // [cloud runAction:[SKAction moveToX:466 duration:0]];
+    //[cloud runAction:[SKAction moveToY:550 duration:0]];
+     
+  //  cloud.position = CGPointMake(466, 550);
+    
+    //[cloud runAction:[SKAction unhide]];
+   //
+    
+    
+    
     
     
 }
@@ -274,12 +362,101 @@
 
 -(void)setUpInitialText
 {
-    SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    /*
+    label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
     label.text = @"Ganaste !";
     label.fontSize = 20.0;
     label.fontColor = [UIColor whiteColor];
     label.position = CGPointMake(400, 400);
     [self addChild:label];
+     */
+    label23 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    label23.text = @"A23";
+    label23.fontSize = 15.0;
+    label23.fontColor = [UIColor whiteColor];
+    label23.position = CGPointMake(100, 140);
+    [self addChild:label23];
+    
+    label24 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    label24.text = @"A24";
+    label24.fontSize = 15.0;
+    label24.fontColor = [UIColor whiteColor];
+    label24.position = CGPointMake(150, 140);
+    [self addChild:label24];
+    
+    label25 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    label25.text = @"A25";
+    label25.fontSize = 15.0;
+    label25.fontColor = [UIColor whiteColor];
+    label25.position = CGPointMake(200, 140);
+    [self addChild:label25];
+    
+    label26 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    label26.text = @"A26";
+    label26.fontSize = 15.0;
+    label26.fontColor = [UIColor whiteColor];
+    label26.position = CGPointMake(250, 140);
+    [self addChild:label26];
+    
+    label27 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    label27.text = @"A27";
+    label27.fontSize = 15.0;
+    label27.fontColor = [UIColor whiteColor];
+    label27.position = CGPointMake(300, 140);
+    [self addChild:label27];
+    
+    labelAddress = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    labelAddress.text = @"";
+    labelAddress.fontSize = 20.0;
+    labelAddress.fontColor = [UIColor whiteColor];
+    labelAddress.position = CGPointMake(242, 650);
+    [self addChild:labelAddress];
+    
+    labelAddress1 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    labelAddress1.text = @"";
+    labelAddress1.fontSize = 20.0;
+    labelAddress1.fontColor = [UIColor whiteColor];
+    labelAddress1.position = CGPointMake(275, 457);
+    [self addChild:labelAddress1];
+    
+    labelAddress2 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    labelAddress2.text = @"";
+    labelAddress2.fontSize = 20.0;
+    labelAddress2.fontColor = [UIColor whiteColor];
+    labelAddress2.position = CGPointMake(275, 387);
+    [self addChild:labelAddress2];
+    
+    labelAddress3 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    labelAddress3.text = @"";
+    labelAddress3.fontSize = 20.0;
+    labelAddress3.fontColor = [UIColor whiteColor];
+    labelAddress3.position = CGPointMake(275, 325);
+    [self addChild:labelAddress3];
+    
+    labelMemoriaIns = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    labelMemoriaIns.text = @"Arrastra las memorias!";
+    labelMemoriaIns.fontSize = 20.0;
+    labelMemoriaIns.fontColor = [UIColor whiteColor];
+    labelMemoriaIns.position = CGPointMake(142, 513);
+    [self addChild:labelMemoriaIns];
+    
+    labelMessage = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    labelMessage.text = @"";
+    labelMessage.fontSize = 15.0;
+    labelMessage.fontColor = [UIColor whiteColor];
+    labelMessage.position = CGPointMake(142, 480);
+    [self addChild:labelMessage];
+    
+    SKAction *disapear = [SKAction fadeOutWithDuration:0];
+    [labelMessage runAction:[SKAction sequence:@[disapear]]];
+    
+    labelDatos = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    labelDatos.text = @"D0-D7";
+    labelDatos.fontSize = 20.0;
+    labelDatos.fontColor = [UIColor blueColor];
+    labelDatos.position = CGPointMake(900, 626);
+    [self addChild:labelDatos];
+    
 }
 -(void) drawLines{
     
@@ -583,6 +760,8 @@
     {
         CGPoint location = [touch locationInNode:self];
         NSLog(@"** TOUCH LOCATION ** \nx: %f / y: %f", location.x, location.y);
+        
+       
         if([startButton containsPoint:location])
         {
             Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
@@ -638,6 +817,90 @@
             _touchPoint = location;
             
         }
+        else if([label23 containsPoint:location])
+        {
+            [self resetLabels];
+            _address = 23;
+            label23.fontColor = [UIColor redColor];
+            if(_gameMode8){
+                labelAddress.text = @"A0-A23";
+                labelAddress1.text = @"23";
+                labelAddress2.text= @"22";
+                labelAddress3.text= @"21";
+            }else{
+                labelAddress.text = @"A0-A23";
+                labelAddress2.text= @"23";
+                labelAddress3.text= @"22";
+            }
+        }
+        else if([label24 containsPoint:location])
+        {
+            [self resetLabels];
+            _address = 24;
+            label24.fontColor = [UIColor redColor];
+            if(_gameMode8){
+                labelAddress.text = @"A0-A24";
+                labelAddress1.text = @"24";
+                labelAddress2.text= @"23";
+                labelAddress3.text= @"22";
+            }else{
+                labelAddress.text = @"A0-A24";
+                labelAddress2.text= @"24";
+                labelAddress3.text= @"23";
+            }
+            
+        }
+        else if([label25 containsPoint:location])
+        {
+            [self resetLabels];
+            _address = 25;
+            label25.fontColor = [UIColor redColor];
+            if(_gameMode8){
+                labelAddress.text = @"A0-A25";
+                labelAddress1.text = @"25";
+                labelAddress2.text= @"24";
+                labelAddress3.text= @"23";
+            }else{
+                labelAddress.text = @"A0-A25";
+                labelAddress2.text= @"25";
+                labelAddress3.text= @"24";
+            }
+           
+        }
+        else if([label26 containsPoint:location])
+        {
+            [self resetLabels];
+            _address = 26;
+            label26.fontColor = [UIColor redColor];
+            if(_gameMode8){
+                labelAddress.text = @"A0-A26";
+                labelAddress1.text = @"26";
+                labelAddress2.text= @"25";
+                labelAddress3.text= @"24";
+            }else{
+                labelAddress.text = @"A0-A26";
+                labelAddress2.text= @"26";
+                labelAddress3.text= @"25";
+            }
+            
+        }
+        else if([label27 containsPoint:location])
+        {
+            [self resetLabels];
+            _address = 27;
+            label27.fontColor = [UIColor redColor];
+            if(_gameMode8){
+                labelAddress.text = @"A0-A27";
+                labelAddress1.text = @"27";
+                labelAddress2.text= @"26";
+                labelAddress3.text= @"25";
+            }else{
+                labelAddress.text = @"A0-A27";
+                labelAddress2.text= @"27";
+                labelAddress3.text= @"26";
+            }
+            
+        }
         
         else if ([decoder containsPoint:location]){
             if(_gameMode8){
@@ -666,7 +929,13 @@
                 mem_7.hidden = YES;
                 mem_8.hidden = YES;
                 
+                SKAction *disapear = [SKAction fadeOutWithDuration:2];
+               
+                [cloud runAction:[SKAction sequence:@[disapear]]];
+                
                 _gameMode8 = NO;
+                
+                [self resetLabels];
                 
             }
             else{
@@ -693,6 +962,8 @@
                 mem_7.hidden = NO;
                 mem_8.hidden = NO;
                 _gameMode8 = YES;
+                
+                [self resetLabels];
             }
             
             
@@ -721,9 +992,27 @@
     mem_8.position = _memoryLoc;
     
     _enLugar = 0;
+    
+    SKAction *disapear = [SKAction fadeOutWithDuration:.5];
+    [labelMessage runAction:[SKAction sequence:@[disapear]]];
 
 }
 
+-(void) resetLabels
+{
+    labelAddress.text = @"";
+    labelAddress1.text = @"";
+    labelAddress2.text = @"";
+    labelAddress3.text = @"";
+    
+    _address = 0;
+    
+    label23.fontColor = [UIColor whiteColor];
+    label24.fontColor = [UIColor whiteColor];
+    label25.fontColor = [UIColor whiteColor];
+    label26.fontColor = [UIColor whiteColor];
+    label27.fontColor = [UIColor whiteColor];
+}
 
 #pragma mark -
 #pragma mark Game Loop
@@ -790,137 +1079,6 @@
     _touchPoint = [[touches anyObject] locationInNode:self];
 }
 
--(void) check: (CGPoint) currentPoint:(BOOL)touchMemory: (BOOL) place: (SKSpriteNode *) nodo{
-    
-   
-        //CGPoint currentPoint = [[touches anyObject] locationInNode:self];
-        // NSLog(@"**  ** \nx: %f / y: %f", currentPoint.x, currentPoint.y);
-        
-        if ( currentPoint.x >= 645 && currentPoint.x <= 755 &&
-            currentPoint.y >= 487 && currentPoint.y <= 560 )
-        {
-            
-            currentPoint.x = mem_box_1.position.x;
-            currentPoint.y = mem_box_1.position.y;
-            
-            nodo.position = currentPoint;
-            
-            [self changeLine1:[UIColor redColor]];
-            
-            place = YES;
-            
-        }else if ( currentPoint.x >= 645 && currentPoint.x <= 755 &&
-                  currentPoint.y >= 365 && currentPoint.y <= 430 )
-        {
-            
-            currentPoint.x = mem_box_2.position.x;
-            currentPoint.y = mem_box_2.position.y;
-            
-            nodo.position = currentPoint;
-            
-            [self changeLine2:[UIColor redColor]];
-            
-            
-            place = YES;
-            
-        }else if ( currentPoint.x >= 645 && currentPoint.x <= 755 &&
-                  currentPoint.y >= 236 && currentPoint.y <= 309 )
-        {
-            
-            currentPoint.x = mem_box_3.position.x;
-            currentPoint.y = mem_box_3.position.y;
-            
-            nodo.position = currentPoint;
-            
-            [self changeLine3:[UIColor redColor]];
-            
-            place = YES;
-            
-        }
-        else if ( currentPoint.x >= 645 && currentPoint.x <= 755 &&
-                 currentPoint.y >= 110 && currentPoint.y <= 183 )
-        {
-            
-            currentPoint.x = mem_box_4.position.x;
-            currentPoint.y = mem_box_4.position.y;
-            
-            nodo.position = currentPoint;
-            
-            [self changeLine4:[UIColor redColor]];
-            
-            
-            place = YES;
-            
-        }else if ( currentPoint.x >= 845 && currentPoint.x <= 955 &&
-                  currentPoint.y >= 487 && currentPoint.y <= 560 )
-        {
-            
-            currentPoint.x = mem_box_5.position.x;
-            currentPoint.y = mem_box_5.position.y;
-            
-            nodo.position = currentPoint;
-            
-            [self changeLine5:[UIColor redColor]];
-            
-            place = YES;
-            
-        }
-        else if ( currentPoint.x >= 845 && currentPoint.x <= 955 &&
-                 currentPoint.y >= 365 && currentPoint.y <= 430 )
-        {
-            
-            currentPoint.x = mem_box_6.position.x;
-            currentPoint.y = mem_box_6.position.y;
-            
-            nodo.position = currentPoint;
-            
-            [self changeLine6:[UIColor redColor]];
-            
-            place = YES;
-            
-        }
-        else if ( currentPoint.x >= 845 && currentPoint.x <= 955 &&
-                 currentPoint.y >= 236 && currentPoint.y <= 309 )
-        {
-            
-            currentPoint.x = mem_box_7.position.x;
-            currentPoint.y = mem_box_7.position.y;
-            
-            nodo.position = currentPoint;
-            
-            [self changeLine7:[UIColor redColor]];
-            
-            place = YES;
-            
-        }
-        else if ( currentPoint.x >= 845 && currentPoint.x <= 955 &&
-                 currentPoint.y >= 110 && currentPoint.y <= 183 )
-        {
-            
-            currentPoint.x = mem_box_8.position.x;
-            currentPoint.y = mem_box_8.position.y;
-            
-            nodo.position = currentPoint;
-            
-            [self changeLine8:[UIColor redColor]];
-            
-            place = YES;
-            
-        }
-        
-        
-        else{
-            SKAction *actionMoveX = [SKAction moveToX:150 duration:1.0];
-            SKAction *actionMoveY = [SKAction moveToY:350 duration:1.0];
-            [nodo runAction:[SKAction group:@[actionMoveY, actionMoveX]]];
-        }
-        
-        
-        touchMemory = NO;
-    
-
-    
-}
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
@@ -2670,13 +2828,82 @@
 
 -(void)update:(CFTimeInterval)currentTime
 {
+    if(_enLugar >0 && !disapear1){
+        
+        //labelMemoriaIns.text = @"";
+        SKAction *disapear = [SKAction fadeOutWithDuration:2];
+        
+        
+        [labelMemoriaIns runAction:[SKAction sequence:@[disapear]]];
+        
+        disapear1 = YES;
+
+    }
     if((_enLugar >= 8)&& _gameMode8 ){
        // [self setUpInitialText];
+        //_address == 23 || _address == 24 || _address == 25 || _address == 26 || _address == 27
+        if(_address == 24){
+            
+            labelMessage.fontColor = [UIColor redColor];
+            labelMessage.fontSize = 15;
+            labelMessage.text = @"Incorrecto, intenta otro decoder";
+            
+            SKAction *apear = [SKAction fadeInWithDuration :.5];
+            
+            
+            [labelMessage runAction:[SKAction sequence:@[apear]]];
+        }
+        else if(_address == 23  || _address == 25 || _address == 26 || _address == 27){
+            labelMessage.fontColor = [UIColor redColor];
+            labelMessage.fontSize = 15;
+            labelMessage.text = @"Incorrecto, intenta otra direccion";
+            
+            SKAction *apear = [SKAction fadeInWithDuration :.5];
+            
+            
+            [labelMessage runAction:[SKAction sequence:@[apear]]];
+        }
+        else{
+            labelMessage.fontColor = [UIColor redColor];
+            labelMessage.fontSize = 15;
+            labelMessage.text = @"Selecciona una direccion!";
+            
+            SKAction *apear = [SKAction fadeInWithDuration :.5];
+            
+            
+            [labelMessage runAction:[SKAction sequence:@[apear]]];
+        }
+        
         
     }
-    if ((!_gameMode8) && (_enLugar >= 4)){
+    else if ((!_gameMode8) && (_enLugar >= 4)){
        // [self setUpInitialText];
+        if(_address == 23 || _address == 25 || _address == 26 || _address == 27){
+            
+            labelMessage.fontColor = [UIColor redColor];
+            labelMessage.fontSize = 15;
+            labelMessage.text = @"Incorrecto, intenta otra direccion";
+            
+            SKAction *apear = [SKAction fadeInWithDuration :.5];
+            
+            
+            [labelMessage runAction:[SKAction sequence:@[apear]]];
+        }
+        if(_address == 24){
+            
+            labelMessage.fontColor = [UIColor greenColor];
+            labelMessage.fontSize = 20;
+            labelMessage.text = @"Correcto!";
+            
+            SKAction *apear = [SKAction fadeInWithDuration :.5];
+            
+            
+            [labelMessage runAction:[SKAction sequence:@[apear]]];
+        }
         
+    }
+    else{
+        labelMessage.text = @"";
     }
     
     if (_touchMemory_1 && (!_inPlace_1))

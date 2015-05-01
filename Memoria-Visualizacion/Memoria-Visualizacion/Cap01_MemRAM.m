@@ -83,10 +83,13 @@
     
     
     [self.scene.view addSubview:textView];
+    /*
     [UIView animateWithDuration:1 delay:0 options:UIViewAnimationCurveEaseInOut  animations:^{
         textView.alpha = 1.0f;
         
     }completion: nil];
+     */
+  
     
     
 }

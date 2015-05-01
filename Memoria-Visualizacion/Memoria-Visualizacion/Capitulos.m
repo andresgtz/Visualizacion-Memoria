@@ -152,48 +152,48 @@
          if([btn_intro containsPoint:location])
          {
          Cap01_Intro *scene = [[Cap01_Intro alloc] initWithSize:self.size];
-         SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+         SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
          [self.view presentScene:scene transition:sceneTransition];
          }
         //scene memoria ram
          else if([btn_mem_ram containsPoint:location])
          {
              Cap01_MemRAM *scene = [[Cap01_MemRAM alloc] initWithSize:self.size];
-             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
              [self.view presentScene:scene transition:sceneTransition];
          }
         //scene celdas binarias
          else if([btn_cel_bin containsPoint:location])
          {
              Cap01_CelBin *scene = [[Cap01_CelBin alloc] initWithSize:self.size];
-             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
              [self.view presentScene:scene transition:sceneTransition];
          }
         //scene memorias nxm
          else if([btn_mem_nm containsPoint:location])
          {
              Cap01_MemRAM_NxM *scene = [[Cap01_MemRAM_NxM alloc] initWithSize:self.size];
-             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
              [self.view presentScene:scene transition:sceneTransition];
          }
         //scene sistema memorias
          else if([btn_sis_mem containsPoint:location])
          {
              Cap01_SistMemoria *scene = [[Cap01_SistMemoria alloc] initWithSize:self.size];
-             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
              [self.view presentScene:scene transition:sceneTransition];
          }
         //scene resumen
          else if([btn_resumen containsPoint:location])
          {
              Cap01_Resumen *scene = [[Cap01_Resumen alloc] initWithSize:self.size];
-             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
              [self.view presentScene:scene transition:sceneTransition];
          }
          else if([startButton containsPoint:location])
          {
              Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
-             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
              [self.view presentScene:scene transition:sceneTransition];
          }
         
