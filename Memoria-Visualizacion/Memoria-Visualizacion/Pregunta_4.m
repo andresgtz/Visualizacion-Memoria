@@ -1,16 +1,16 @@
 //
-//  Quizz.m
+//  Pregunta_4.m
 //  Memoria-Visualizacion
 //
-//  Created by Enrique O Hernandez on 4/30/15.
+//  Created by Jesus on 5/1/15.
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
 
-#import "Quizz.h"
+#import "Pregunta_4.h"
 #import "Scene00.h"
-#import "Pregunta_2.h"
+#import "Resultado_Quiz.h"
 
-@implementation Quizz
+@implementation Pregunta_4
 {
     SKSpriteNode *respuestaIncorrecta1;
     SKSpriteNode *respuestaIncorrecta2;
@@ -52,15 +52,15 @@
     footer.position = CGPointMake(self.size.width/2, 38);
     [self addChild:footer];
     /*
-    leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
-    leftButton.position = CGPointMake(38, 38);
-    [self addChild:leftButton];
-    
-    rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
-    rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
-    [self addChild:rightButton];
-    */
+     leftButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_left"];
+     leftButton.position = CGPointMake(38, 38);
+     [self addChild:leftButton];
      
+     rightButton = [SKSpriteNode spriteNodeWithImageNamed:@"button_right"];
+     rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
+     [self addChild:rightButton];
+     */
+    
     startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start_2"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
@@ -73,7 +73,7 @@
     paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
     path = [basePath stringByAppendingPathComponent:@"Quiz.plist"];
-   
+    
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
@@ -104,13 +104,13 @@
     respuestaIncorrecta3.position = CGPointMake(700,200);
     [self addChild:respuestaIncorrecta3];
     
-   
+    
     
 }
 -(void)setUpInitialText
 {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    label.text = @"Pregunta 1";
+    label.text = @"Pregunta 4";
     label.fontSize = 36.0;
     label.fontColor = [UIColor blackColor];
     label.position = CGPointMake(500, 600);
@@ -177,44 +177,44 @@
             //Escribir respuesta correcta en plist
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
             int value = 1;
-            [data setObject:[NSNumber numberWithInt:value] forKey:@"Pregunta_1"];
+            [data setObject:[NSNumber numberWithInt:value] forKey:@"Pregunta_4"];
             [data writeToFile: path atomically:YES];
             
             //cambio de scene (pregunta)
-            Pregunta_2 *scene = [[Pregunta_2 alloc] initWithSize:self.size];
+            Resultado_Quiz *scene = [[Resultado_Quiz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
             
         }else if ([respuestaIncorrecta1 containsPoint:location]){
             //Escribir respuesta incorrecta en plist
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_1"];
+            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_4"];
             [data writeToFile: path atomically:YES];
             
             //cambio de scene (pregunta)
-            Pregunta_2 *scene = [[Pregunta_2 alloc] initWithSize:self.size];
+            Resultado_Quiz *scene = [[Resultado_Quiz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
             
         }else if ([respuestaIncorrecta2 containsPoint:location]){
             //Escribir respuesta incorrecta en plist
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_1"];
+            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_4"];
             [data writeToFile: path atomically:YES];
             
             //cambio de scene (pregunta)
-            Pregunta_2 *scene = [[Pregunta_2 alloc] initWithSize:self.size];
+            Resultado_Quiz *scene = [[Resultado_Quiz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
             
         }else if ([respuestaIncorrecta3 containsPoint:location]){
             //Escribir respuesta incorrecta en plist
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_1"];
+            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_4"];
             [data writeToFile: path atomically:YES];
             
             //cambio de scene (pregunta)
-            Pregunta_2 *scene = [[Pregunta_2 alloc] initWithSize:self.size];
+            Resultado_Quiz *scene = [[Resultado_Quiz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
             

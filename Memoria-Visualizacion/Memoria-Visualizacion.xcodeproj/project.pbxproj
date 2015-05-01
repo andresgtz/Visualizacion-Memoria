@@ -97,6 +97,11 @@
 		1B94BCC31AF193A700622D75 /* boxMemory.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B94BCC21AF193A700622D75 /* boxMemory.png */; };
 		1BE0278C1AE9E3A700EE3500 /* Actividad_02.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */; };
 		F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */ = {isa = PBXBuildFile; fileRef = F0205C381ADF24EF00F56196 /* sistema_memoria.png */; };
+		F0DCBC601AF4269D00E5CDA1 /* Quiz.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0DCBC5F1AF4269D00E5CDA1 /* Quiz.plist */; };
+		F0DCBC631AF4437F00E5CDA1 /* Pregunta_2.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DCBC621AF4437F00E5CDA1 /* Pregunta_2.m */; };
+		F0DCBC661AF445AD00E5CDA1 /* Pregunta_3.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DCBC651AF445AD00E5CDA1 /* Pregunta_3.m */; };
+		F0DCBC691AF4462000E5CDA1 /* Pregunta_4.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DCBC681AF4462000E5CDA1 /* Pregunta_4.m */; };
+		F0DCBC6C1AF4466600E5CDA1 /* Resultado_Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DCBC6B1AF4466600E5CDA1 /* Resultado_Quiz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +236,15 @@
 		1BE0278A1AE9E3A700EE3500 /* Actividad_02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actividad_02.h; sourceTree = "<group>"; };
 		1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actividad_02.m; sourceTree = "<group>"; };
 		F0205C381ADF24EF00F56196 /* sistema_memoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sistema_memoria.png; sourceTree = "<group>"; };
+		F0DCBC5F1AF4269D00E5CDA1 /* Quiz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Quiz.plist; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Quiz.plist"; sourceTree = "<group>"; };
+		F0DCBC611AF4437F00E5CDA1 /* Pregunta_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pregunta_2.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Pregunta_2.h"; sourceTree = "<group>"; };
+		F0DCBC621AF4437F00E5CDA1 /* Pregunta_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pregunta_2.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Pregunta_2.m"; sourceTree = "<group>"; };
+		F0DCBC641AF445AD00E5CDA1 /* Pregunta_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pregunta_3.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Pregunta_3.h"; sourceTree = "<group>"; };
+		F0DCBC651AF445AD00E5CDA1 /* Pregunta_3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pregunta_3.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Pregunta_3.m"; sourceTree = "<group>"; };
+		F0DCBC671AF4462000E5CDA1 /* Pregunta_4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pregunta_4.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Pregunta_4.h"; sourceTree = "<group>"; };
+		F0DCBC681AF4462000E5CDA1 /* Pregunta_4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pregunta_4.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Pregunta_4.m"; sourceTree = "<group>"; };
+		F0DCBC6A1AF4466600E5CDA1 /* Resultado_Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resultado_Quiz.h; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Resultado_Quiz.h"; sourceTree = "<group>"; };
+		F0DCBC6B1AF4466600E5CDA1 /* Resultado_Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Resultado_Quiz.m; path = "../../../../../JesusN/Desktop/Visualizacion-Memoria/Memoria-Visualizacion/Memoria-Visualizacion/Resultado_Quiz.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +294,7 @@
 		1B0E49A81ADDDF92002A888B /* Memoria-Visualizacion */ = {
 			isa = PBXGroup;
 			children = (
+				F0DCBC5F1AF4269D00E5CDA1 /* Quiz.plist */,
 				1B462BC41AE87E7900F600F0 /* Other Resources */,
 				1B0E49AD1ADDDF92002A888B /* AppDelegate.h */,
 				1B0E49AE1ADDDF92002A888B /* AppDelegate.m */,
@@ -339,6 +354,14 @@
 				1B62C8D91AF32BD30017DAE8 /* Actividad_03.m */,
 				1B62C8DB1AF32BE30017DAE8 /* Quizz.h */,
 				1B62C8DC1AF32BE30017DAE8 /* Quizz.m */,
+				F0DCBC611AF4437F00E5CDA1 /* Pregunta_2.h */,
+				F0DCBC621AF4437F00E5CDA1 /* Pregunta_2.m */,
+				F0DCBC641AF445AD00E5CDA1 /* Pregunta_3.h */,
+				F0DCBC651AF445AD00E5CDA1 /* Pregunta_3.m */,
+				F0DCBC671AF4462000E5CDA1 /* Pregunta_4.h */,
+				F0DCBC681AF4462000E5CDA1 /* Pregunta_4.m */,
+				F0DCBC6A1AF4466600E5CDA1 /* Resultado_Quiz.h */,
+				F0DCBC6B1AF4466600E5CDA1 /* Resultado_Quiz.m */,
 				1B86B9E61ADF20DA00782F2F /* Capitulos.m */,
 				1B86B9E81ADF20E600782F2F /* Capitulos.h */,
 				1B4632C01ADF36C60012ABEB /* Cap01_Intro.h */,
@@ -583,6 +606,7 @@
 				1B62C8D71AF32B200017DAE8 /* quizz.png in Resources */,
 				1B86B9F91ADF280E00782F2F /* footer@2x.png in Resources */,
 				1B0E49EB1ADDE9EA002A888B /* capitulos.png in Resources */,
+				F0DCBC601AF4269D00E5CDA1 /* Quiz.plist in Resources */,
 				1B62C8CF1AF329900017DAE8 /* start_2.png in Resources */,
 				1B0E49F01ADDE9EA002A888B /* resumen.png in Resources */,
 				1B86B9FF1ADF2AF700782F2F /* background_main@2x.png in Resources */,
@@ -622,17 +646,21 @@
 				1B1720791AF29F7F0046C715 /* Cap01_CelBin_3.m in Sources */,
 				1B462BA81AE8604C00F600F0 /* Actividad_01.m in Sources */,
 				1B0E49B71ADDDF92002A888B /* GameViewController.m in Sources */,
+				F0DCBC6C1AF4466600E5CDA1 /* Resultado_Quiz.m in Sources */,
 				1B4632D21ADF38260012ABEB /* Cap01_Resumen.m in Sources */,
 				1B4632CF1ADF38010012ABEB /* Cap01_SistMemoria.m in Sources */,
 				1B462BD11AE87E7900F600F0 /* SKEmitterNode+SKTExtras.m in Sources */,
 				1B62C8DD1AF32BE30017DAE8 /* Quizz.m in Sources */,
 				1BE0278C1AE9E3A700EE3500 /* Actividad_02.m in Sources */,
+				F0DCBC661AF445AD00E5CDA1 /* Pregunta_3.m in Sources */,
 				1B0E49AF1ADDDF92002A888B /* AppDelegate.m in Sources */,
 				1B0E49B21ADDDF92002A888B /* GameScene.m in Sources */,
 				1B0E49AC1ADDDF92002A888B /* main.m in Sources */,
 				1B4632C91ADF376F0012ABEB /* Cap01_CelBin.m in Sources */,
 				1B86B9EA1ADF20FA00782F2F /* Actividades.m in Sources */,
+				F0DCBC691AF4462000E5CDA1 /* Pregunta_4.m in Sources */,
 				1B4632CC1ADF37E30012ABEB /* Cap01_MemRAM_NxM.m in Sources */,
+				F0DCBC631AF4437F00E5CDA1 /* Pregunta_2.m in Sources */,
 				1B462BD31AE87E7900F600F0 /* SKTAudio.m in Sources */,
 				1B462BD21AE87E7900F600F0 /* SKNode+SKTExtras.m in Sources */,
 				1B17208B1AF29FAB0046C715 /* Cap01_SistMemoria_3.m in Sources */,

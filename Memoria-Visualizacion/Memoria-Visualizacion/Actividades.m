@@ -12,6 +12,7 @@
 #import "Actividades.h"
 #import "Actividad_01.h"
 #import "Actividad_02.h"
+#import "Quizz.h"
 @import AVFoundation;
 
 @implementation Actividades
@@ -154,6 +155,11 @@
         else if([btn_act2 containsPoint:location])
         {
             Actividad_02 *scene = [[Actividad_02 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition flipVerticalWithDuration:1]; //[SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            [self.view presentScene:scene transition:sceneTransition];
+        }else if([quizz containsPoint:location])
+        {
+            Quizz *scene = [[Quizz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition flipVerticalWithDuration:1]; //[SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
