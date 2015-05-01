@@ -109,7 +109,7 @@
     [self addChild:rightButton];
     */
      
-    startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
+    startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start_2"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
     

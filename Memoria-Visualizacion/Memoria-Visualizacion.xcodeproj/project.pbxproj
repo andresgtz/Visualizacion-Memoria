@@ -67,6 +67,16 @@
 		1B4632CF1ADF38010012ABEB /* Cap01_SistMemoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4632CE1ADF38010012ABEB /* Cap01_SistMemoria.m */; };
 		1B4632D21ADF38260012ABEB /* Cap01_Resumen.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4632D11ADF38260012ABEB /* Cap01_Resumen.m */; };
 		1B62C8C71AF311C70017DAE8 /* BusDireccionIns.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8C61AF311C70017DAE8 /* BusDireccionIns.png */; };
+		1B62C8CD1AF328A10017DAE8 /* background_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8CC1AF328A10017DAE8 /* background_2.png */; };
+		1B62C8CF1AF329900017DAE8 /* start_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8CE1AF329900017DAE8 /* start_2.png */; };
+		1B62C8D41AF32B200017DAE8 /* Actividad_1_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8D01AF32B200017DAE8 /* Actividad_1_blue.png */; };
+		1B62C8D51AF32B200017DAE8 /* Actividad_2_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8D11AF32B200017DAE8 /* Actividad_2_blue.png */; };
+		1B62C8D61AF32B200017DAE8 /* Actividad_3_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8D21AF32B200017DAE8 /* Actividad_3_blue.png */; };
+		1B62C8D71AF32B200017DAE8 /* quizz.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8D31AF32B200017DAE8 /* quizz.png */; };
+		1B62C8DA1AF32BD30017DAE8 /* Actividad_03.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62C8D91AF32BD30017DAE8 /* Actividad_03.m */; };
+		1B62C8DD1AF32BE30017DAE8 /* Quizz.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B62C8DC1AF32BE30017DAE8 /* Quizz.m */; };
+		1B62C8DF1AF32CD60017DAE8 /* Act_2_ins.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8DE1AF32CD60017DAE8 /* Act_2_ins.png */; };
+		1B62C8E11AF32EEA0017DAE8 /* Actividad2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B62C8E01AF32EEA0017DAE8 /* Actividad2.png */; };
 		1B7FC93A1AE944B30047AE3F /* actividad_1_linas.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B7FC9391AE944B30047AE3F /* actividad_1_linas.png */; };
 		1B86B9E71ADF20DA00782F2F /* Capitulos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B86B9E61ADF20DA00782F2F /* Capitulos.m */; };
 		1B86B9EA1ADF20FA00782F2F /* Actividades.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B86B9E91ADF20FA00782F2F /* Actividades.m */; };
@@ -186,6 +196,18 @@
 		1B4632D01ADF38260012ABEB /* Cap01_Resumen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cap01_Resumen.h; sourceTree = "<group>"; };
 		1B4632D11ADF38260012ABEB /* Cap01_Resumen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cap01_Resumen.m; sourceTree = "<group>"; };
 		1B62C8C61AF311C70017DAE8 /* BusDireccionIns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BusDireccionIns.png; sourceTree = "<group>"; };
+		1B62C8CC1AF328A10017DAE8 /* background_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_2.png; sourceTree = "<group>"; };
+		1B62C8CE1AF329900017DAE8 /* start_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_2.png; sourceTree = "<group>"; };
+		1B62C8D01AF32B200017DAE8 /* Actividad_1_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Actividad_1_blue.png; sourceTree = "<group>"; };
+		1B62C8D11AF32B200017DAE8 /* Actividad_2_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Actividad_2_blue.png; sourceTree = "<group>"; };
+		1B62C8D21AF32B200017DAE8 /* Actividad_3_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Actividad_3_blue.png; sourceTree = "<group>"; };
+		1B62C8D31AF32B200017DAE8 /* quizz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quizz.png; sourceTree = "<group>"; };
+		1B62C8D81AF32BD30017DAE8 /* Actividad_03.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actividad_03.h; sourceTree = "<group>"; };
+		1B62C8D91AF32BD30017DAE8 /* Actividad_03.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actividad_03.m; sourceTree = "<group>"; };
+		1B62C8DB1AF32BE30017DAE8 /* Quizz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quizz.h; sourceTree = "<group>"; };
+		1B62C8DC1AF32BE30017DAE8 /* Quizz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quizz.m; sourceTree = "<group>"; };
+		1B62C8DE1AF32CD60017DAE8 /* Act_2_ins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Act_2_ins.png; sourceTree = "<group>"; };
+		1B62C8E01AF32EEA0017DAE8 /* Actividad2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Actividad2.png; sourceTree = "<group>"; };
 		1B7FC9391AE944B30047AE3F /* actividad_1_linas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actividad_1_linas.png; sourceTree = "<group>"; };
 		1B86B9E61ADF20DA00782F2F /* Capitulos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Capitulos.m; sourceTree = "<group>"; };
 		1B86B9E81ADF20E600782F2F /* Capitulos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capitulos.h; sourceTree = "<group>"; };
@@ -313,6 +335,10 @@
 				1B462BA71AE8604C00F600F0 /* Actividad_01.m */,
 				1BE0278A1AE9E3A700EE3500 /* Actividad_02.h */,
 				1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */,
+				1B62C8D81AF32BD30017DAE8 /* Actividad_03.h */,
+				1B62C8D91AF32BD30017DAE8 /* Actividad_03.m */,
+				1B62C8DB1AF32BE30017DAE8 /* Quizz.h */,
+				1B62C8DC1AF32BE30017DAE8 /* Quizz.m */,
 				1B86B9E61ADF20DA00782F2F /* Capitulos.m */,
 				1B86B9E81ADF20E600782F2F /* Capitulos.h */,
 				1B4632C01ADF36C60012ABEB /* Cap01_Intro.h */,
@@ -366,6 +392,7 @@
 				1B86B9F11ADF280E00782F2F /* footer@2x.png */,
 				1B86B9F21ADF280E00782F2F /* start.png */,
 				1B86B9F31ADF280E00782F2F /* start@2x.png */,
+				1B62C8CE1AF329900017DAE8 /* start_2.png */,
 				F0205C381ADF24EF00F56196 /* sistema_memoria.png */,
 				1B0E49F11ADDEB72002A888B /* titulo_memoria.png */,
 				1B0E49DD1ADDE9D9002A888B /* actividad_1.png */,
@@ -378,7 +405,12 @@
 				1B0E49E51ADDE9EA002A888B /* memoria_nxm.png */,
 				1B0E49E71ADDE9EA002A888B /* resumen.png */,
 				1B0E49D91ADDDFCB002A888B /* background_main.jpg */,
+				1B62C8CC1AF328A10017DAE8 /* background_2.png */,
 				1B0E49DA1ADDDFCB002A888B /* background_main@2x.jpg */,
+				1B62C8D01AF32B200017DAE8 /* Actividad_1_blue.png */,
+				1B62C8D11AF32B200017DAE8 /* Actividad_2_blue.png */,
+				1B62C8D21AF32B200017DAE8 /* Actividad_3_blue.png */,
+				1B62C8D31AF32B200017DAE8 /* quizz.png */,
 			);
 			name = Imagenes;
 			sourceTree = "<group>";
@@ -397,7 +429,9 @@
 				1B462BB61AE871AC00F600F0 /* memoria_box.png */,
 				1B462BB71AE871AC00F600F0 /* Memoria.png */,
 				1B1720A21AF302210046C715 /* Act_1_ins.png */,
+				1B62C8DE1AF32CD60017DAE8 /* Act_2_ins.png */,
 				1B462BA91AE8621400F600F0 /* Actividad1.png */,
+				1B62C8E01AF32EEA0017DAE8 /* Actividad2.png */,
 				1B94BCC21AF193A700622D75 /* boxMemory.png */,
 			);
 			name = Actividad1;
@@ -518,30 +552,38 @@
 				1B86B9FE1ADF2AF700782F2F /* background_main.png in Resources */,
 				1B0E49BF1ADDDF92002A888B /* LaunchScreen.xib in Resources */,
 				1B0E49ED1ADDE9EA002A888B /* Introduccion.png in Resources */,
+				1B62C8DF1AF32CD60017DAE8 /* Act_2_ins.png in Resources */,
 				1B462BB81AE871AC00F600F0 /* memoria_box.png in Resources */,
 				1B0E49E81ADDE9EA002A888B /* actividad_2.png in Resources */,
 				1B0E49BC1ADDDF92002A888B /* Images.xcassets in Resources */,
 				1B462BBB1AE8732F00F600F0 /* memoria_act1.png in Resources */,
 				1B94BCBD1AF18D9400622D75 /* Lineas3-8.png in Resources */,
+				1B62C8D51AF32B200017DAE8 /* Actividad_2_blue.png in Resources */,
 				F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */,
 				1B1720A01AF2FD0F0046C715 /* Actividades_2.png in Resources */,
 				1B1720951AF29FC40046C715 /* diagrama_sis2.png in Resources */,
 				1B17209D1AF2D6110046C715 /* Actividad_1_new.png in Resources */,
 				1B1720A31AF302210046C715 /* Act_1_ins.png in Resources */,
+				1B62C8D61AF32B200017DAE8 /* Actividad_3_blue.png in Resources */,
 				1B0E49E91ADDE9EA002A888B /* actividad_3.png in Resources */,
 				1B17209B1AF2CE470046C715 /* Cloud1.png in Resources */,
 				1B0E49B41ADDDF92002A888B /* GameScene.sks in Resources */,
 				1B0E49DE1ADDE9D9002A888B /* actividad_1.png in Resources */,
 				1B94BCBC1AF18D9400622D75 /* Lineas2-4.png in Resources */,
 				1B86B9FA1ADF280E00782F2F /* start.png in Resources */,
+				1B62C8E11AF32EEA0017DAE8 /* Actividad2.png in Resources */,
 				1B1720921AF29FC40046C715 /* diagrama_nm.png in Resources */,
 				1B94BCC11AF1905900622D75 /* decoder-3x8.png in Resources */,
+				1B62C8CD1AF328A10017DAE8 /* background_2.png in Resources */,
 				1B1720931AF29FC40046C715 /* diagrama_ram.png in Resources */,
 				1B0E49F21ADDEB72002A888B /* titulo_memoria.png in Resources */,
+				1B62C8D41AF32B200017DAE8 /* Actividad_1_blue.png in Resources */,
 				1B0E49DC1ADDDFCB002A888B /* background_main@2x.jpg in Resources */,
 				1B0E49EA1ADDE9EA002A888B /* actividades.png in Resources */,
+				1B62C8D71AF32B200017DAE8 /* quizz.png in Resources */,
 				1B86B9F91ADF280E00782F2F /* footer@2x.png in Resources */,
 				1B0E49EB1ADDE9EA002A888B /* capitulos.png in Resources */,
+				1B62C8CF1AF329900017DAE8 /* start_2.png in Resources */,
 				1B0E49F01ADDE9EA002A888B /* resumen.png in Resources */,
 				1B86B9FF1ADF2AF700782F2F /* background_main@2x.png in Resources */,
 				1B1720911AF29FC40046C715 /* diagrama_celbin.png in Resources */,
@@ -583,6 +625,7 @@
 				1B4632D21ADF38260012ABEB /* Cap01_Resumen.m in Sources */,
 				1B4632CF1ADF38010012ABEB /* Cap01_SistMemoria.m in Sources */,
 				1B462BD11AE87E7900F600F0 /* SKEmitterNode+SKTExtras.m in Sources */,
+				1B62C8DD1AF32BE30017DAE8 /* Quizz.m in Sources */,
 				1BE0278C1AE9E3A700EE3500 /* Actividad_02.m in Sources */,
 				1B0E49AF1ADDDF92002A888B /* AppDelegate.m in Sources */,
 				1B0E49B21ADDDF92002A888B /* GameScene.m in Sources */,
@@ -596,6 +639,7 @@
 				1B1720841AF29F910046C715 /* Cap01_MemRAM_2.m in Sources */,
 				1B462BD01AE87E7900F600F0 /* SKAction+SKTExtras.m in Sources */,
 				1B1720781AF29F7F0046C715 /* Cap01_CelBin_2.m in Sources */,
+				1B62C8DA1AF32BD30017DAE8 /* Actividad_03.m in Sources */,
 				1B17208A1AF29FAB0046C715 /* Cap01_SistMemoria_2.m in Sources */,
 				1B86B9E71ADF20DA00782F2F /* Capitulos.m in Sources */,
 				1B462BD41AE87E7900F600F0 /* SKTUtils.mm in Sources */,

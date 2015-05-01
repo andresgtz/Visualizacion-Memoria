@@ -9,6 +9,9 @@
 #import "Actividad_01.h"
 #import "Scene00.h"
 #import "SKTUtils.h"
+#import "Actividad_02.h"
+#import "Actividades.h"
+
 
 @implementation Actividad_01
 {
@@ -354,7 +357,7 @@
     rightButton.position = CGPointMake(self.size.width/2 + 470, 38);
     [self addChild:rightButton];
     
-    startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start"];
+    startButton = [SKSpriteNode spriteNodeWithImageNamed:@"start_2"];
     startButton.position = CGPointMake(self.size.width/2 - 20 , 38);
     [self addChild:startButton];
     
@@ -765,6 +768,18 @@
         if([startButton containsPoint:location])
         {
             Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            [self.view presentScene:scene transition:sceneTransition];
+        }
+        else if([leftButton containsPoint:location])
+        {
+            Actividades *scene = [[Actividades alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            [self.view presentScene:scene transition:sceneTransition];
+        }
+        else if([rightButton containsPoint:location])
+        {
+            Actividad_02 *scene = [[Actividad_02 alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
