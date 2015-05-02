@@ -1,16 +1,17 @@
+
 //
-//  Quizz.m
+//  Pregunta_10.m
 //  Memoria-Visualizacion
 //
-//  Created by Enrique O Hernandez on 4/30/15.
+//  Created by Jesus on 5/2/15.
 //  Copyright (c) 2015 NLCJohn. All rights reserved.
 //
 
-#import "Pregunta_2.h"
+#import "Pregunta_10.h"
 #import "Scene00.h"
-#import "Pregunta_3.h"
+#import "Resultado_Quiz.h"
 
-@implementation Pregunta_2
+@implementation Pregunta_10
 {
     SKSpriteNode *respuestaIncorrecta1;
     SKSpriteNode *respuestaIncorrecta2;
@@ -35,7 +36,7 @@
         
         
         self.backgroundColor=[UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:1.0f];
-
+        
         
         [self setUpFooter];
         [self setUpPlist];
@@ -99,18 +100,21 @@
     
     
     
+    
+    
+    
 }
 -(void)setUpInitialText
 {
     SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    label.text = @"Pregunta 2";
+    label.text = @"Pregunta 10";
     label.fontSize = 36.0;
     label.fontColor = [UIColor blackColor];
     label.position = CGPointMake(500, 600);
     [self addChild:label];
     
     SKLabelNode *pregunta = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    pregunta.text = @"La memoria RAM es volatil.";
+    pregunta.text = @"Las memorias RAM dinámicas sincrónicas son aquellas que realizan el refresco de memeoria en forma transaparente";
     pregunta.fontSize = 16.0;
     pregunta.fontColor = [UIColor blackColor];
     pregunta.position = CGPointMake(500, 550);
@@ -124,12 +128,11 @@
     [self addChild:r1];
     
     SKLabelNode *r2 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    r2.text = @"B) Falso";
+    r2.text = @"B)  Falso";
     r2.fontSize = 16.0;
     r2.fontColor = [UIColor blackColor];
     r2.position = CGPointMake(750, 400);
     [self addChild:r2];
-    
     
 }
 
@@ -186,44 +189,44 @@
             //Escribir respuesta correcta en plist
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
             int value = 1;
-            [data setObject:[NSNumber numberWithInt:value] forKey:@"Pregunta_2"];
+            [data setObject:[NSNumber numberWithInt:value] forKey:@"Pregunta_10"];
             [data writeToFile: path atomically:YES];
             
             //cambio de scene (pregunta)
-            Pregunta_3 *scene = [[Pregunta_3 alloc] initWithSize:self.size];
+            Resultado_Quiz *scene = [[Resultado_Quiz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
             
         }else if ([respuestaIncorrecta1 containsPoint:location]){
             //Escribir respuesta incorrecta en plist
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_2"];
+            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_10"];
             [data writeToFile: path atomically:YES];
             
             //cambio de scene (pregunta)
-            Pregunta_3 *scene = [[Pregunta_3 alloc] initWithSize:self.size];
+            Resultado_Quiz *scene = [[Resultado_Quiz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
             
         }else if ([respuestaIncorrecta2 containsPoint:location]){
             //Escribir respuesta incorrecta en plist
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_2"];
+            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_10"];
             [data writeToFile: path atomically:YES];
             
             //cambio de scene (pregunta)
-            Pregunta_3 *scene = [[Pregunta_3 alloc] initWithSize:self.size];
+            Resultado_Quiz *scene = [[Resultado_Quiz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
             
         }else if ([respuestaIncorrecta3 containsPoint:location]){
             //Escribir respuesta incorrecta en plist
             NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_2"];
+            [data setObject:[NSNumber numberWithInt:0] forKey:@"Pregunta_10"];
             [data writeToFile: path atomically:YES];
             
             //cambio de scene (pregunta)
-            Pregunta_3 *scene = [[Pregunta_3 alloc] initWithSize:self.size];
+            Resultado_Quiz *scene = [[Resultado_Quiz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
             

@@ -89,20 +89,20 @@
 
 - (void)setupBotones
 {
-    respuestaCorrecta = [SKSpriteNode spriteNodeWithImageNamed:@"introduccion"];
-    respuestaCorrecta.position = CGPointMake(300,350);
-    [self addChild:respuestaCorrecta];
-    
-    respuestaIncorrecta1 = [SKSpriteNode spriteNodeWithImageNamed:@"btn_memoria_ram"];
-    respuestaIncorrecta1.position = CGPointMake(300,200);
-    [self addChild:respuestaIncorrecta1];
-    
-    respuestaIncorrecta2 = [SKSpriteNode spriteNodeWithImageNamed:@"celda_binaria"];
-    respuestaIncorrecta2.position = CGPointMake(700,350);
+    respuestaIncorrecta2 = [SKSpriteNode spriteNodeWithImageNamed:@"boton_respuesta"];
+    respuestaIncorrecta2.position = CGPointMake(350,350);
     [self addChild:respuestaIncorrecta2];
     
-    respuestaIncorrecta3 = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_nxm"];
-    respuestaIncorrecta3.position = CGPointMake(700,200);
+    respuestaIncorrecta1 = [SKSpriteNode spriteNodeWithImageNamed:@"boton_respuesta"];
+    respuestaIncorrecta1.position = CGPointMake(350,200);
+    [self addChild:respuestaIncorrecta1];
+    
+    respuestaCorrecta = [SKSpriteNode spriteNodeWithImageNamed:@"boton_respuesta"];
+    respuestaCorrecta.position = CGPointMake(750,350);
+    [self addChild:respuestaCorrecta];
+    
+    respuestaIncorrecta3 = [SKSpriteNode spriteNodeWithImageNamed:@"boton_respuesta"];
+    respuestaIncorrecta3.position = CGPointMake(750,200);
     [self addChild:respuestaIncorrecta3];
     
    
@@ -123,6 +123,34 @@
     pregunta.fontColor = [UIColor blackColor];
     pregunta.position = CGPointMake(500, 550);
     [self addChild:pregunta];
+    
+    SKLabelNode *r1 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    r1.text = @"A) Readable Accesible Memory";
+    r1.fontSize = 16.0;
+    r1.fontColor = [UIColor blackColor];
+    r1.position = CGPointMake(330, 400);
+    [self addChild:r1];
+    
+    SKLabelNode *r2 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    r2.text = @"B) Random Access Memory";
+    r2.fontSize = 16.0;
+    r2.fontColor = [UIColor blackColor];
+    r2.position = CGPointMake(750, 400);
+    [self addChild:r2];
+    
+    SKLabelNode *r3 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    r3.text = @"C) Random Accessible Memory";
+    r3.fontSize = 16.0;
+    r3.fontColor = [UIColor blackColor];
+    r3.position = CGPointMake(330, 250);
+    [self addChild:r3];
+    
+    SKLabelNode *r4 = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    r4.text = @"D) Readable Available Memory";
+    r4.fontSize = 16.0;
+    r4.fontColor = [UIColor blackColor];
+    r4.position = CGPointMake(750, 250);
+    [self addChild:r4];
 }
 
 - (void)willMoveFromView:(SKView *)view

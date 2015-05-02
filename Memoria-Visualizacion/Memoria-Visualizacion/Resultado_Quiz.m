@@ -97,6 +97,13 @@
     label.position = CGPointMake(500, 600);
     [self addChild:label];
     
+    SKLabelNode *reg = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
+    reg.text = @"Haz touch en el botón de inicion para regresar.";
+    reg.fontSize = 14.0;
+    reg.fontColor = [UIColor blackColor];
+    reg.position = CGPointMake(500, 140);
+    [self addChild:reg];
+    
     //resultado quiz
     NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     
@@ -117,7 +124,7 @@
 
     
     SKLabelNode *calificacion = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    calificacion.text = [NSString stringWithFormat:@"%@/4", resultado];
+    calificacion.text = [NSString stringWithFormat:@"%@/10", resultado];
     calificacion.fontSize = 16.0;
     calificacion.fontColor = [UIColor blackColor];
     calificacion.position = CGPointMake(500, 550);
