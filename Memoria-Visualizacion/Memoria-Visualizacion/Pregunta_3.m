@@ -34,7 +34,8 @@
     if(self=[super initWithSize:size]){
         
         
-        self.backgroundColor = [SKColor whiteColor];
+        self.backgroundColor=[UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:1.0f];
+
         
         [self setUpFooter];
         [self setUpPlist];
@@ -117,7 +118,7 @@
     [self addChild:label];
     
     SKLabelNode *pregunta = [SKLabelNode labelNodeWithFontNamed:@"Thonburi-Bold"];
-    pregunta.text = @"TEXTO DE LA PREGUNTA";
+    pregunta.text = @"¿De cuantas celdas binarias esta compuesta una memoria RAM de 2^n palabras de m bits?";
     pregunta.fontSize = 16.0;
     pregunta.fontColor = [UIColor blackColor];
     pregunta.position = CGPointMake(500, 550);

@@ -30,7 +30,8 @@
     if(self=[super initWithSize:size]){
         
         
-        self.backgroundColor = [SKColor whiteColor];
+        self.backgroundColor=[UIColor colorWithRed:(248.0f/255.0) green:(241.0f/255.0) blue:(226.0f/255.0) alpha:1.0f];
+
         
         [self setUpFooter];
         [self setUpPlist];
