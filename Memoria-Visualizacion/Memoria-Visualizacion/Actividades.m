@@ -34,7 +34,7 @@
         
         
        // self.backgroundColor = [SKColor blueColor];
-        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background_2"];
+        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"background_2_2"];
         background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         background.size = self.frame.size;
         
