@@ -39,16 +39,12 @@
 -(id)initWithSize:(CGSize)size
 {
     if(self=[super initWithSize:size]){
-        /*
-        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"background_main.jpg"];
+        
+        SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background_2"];
         background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         background.size = self.frame.size;
         
         [self addChild:background];
-        
-         
-         */
-        self.backgroundColor = [SKColor grayColor];
         [self setupBotones];
         [self setUpFooter];
     }
@@ -66,27 +62,27 @@
 - (void)setupBotones
 {
     
-    btn_intro = [SKSpriteNode spriteNodeWithImageNamed:@"introduccion"];
+    btn_intro = [SKSpriteNode spriteNodeWithImageNamed:@"Introduccion_blue"];
     btn_intro.position = CGPointMake(500,650);
     [self addChild:btn_intro];
     
-    btn_mem_ram = [SKSpriteNode spriteNodeWithImageNamed:@"btn_memoria_ram"];
+    btn_mem_ram = [SKSpriteNode spriteNodeWithImageNamed:@"Memoria_RAM_blue"];
     btn_mem_ram.position = CGPointMake(500,550);
     [self addChild:btn_mem_ram];
     
-    btn_cel_bin = [SKSpriteNode spriteNodeWithImageNamed:@"celda_binaria"];
+    btn_cel_bin = [SKSpriteNode spriteNodeWithImageNamed:@"Celda_Binaria_blue"];
     btn_cel_bin.position = CGPointMake(500,450);
     [self addChild:btn_cel_bin];
     
-    btn_mem_nm = [SKSpriteNode spriteNodeWithImageNamed:@"memoria_nxm"];
+    btn_mem_nm = [SKSpriteNode spriteNodeWithImageNamed:@"Memoria_nxm_blue"];
     btn_mem_nm.position = CGPointMake(500,350);
     [self addChild:btn_mem_nm];
     
-    btn_sis_mem = [SKSpriteNode spriteNodeWithImageNamed:@"sistema_memoria"];
+    btn_sis_mem = [SKSpriteNode spriteNodeWithImageNamed:@"Sistema_memoria_blue"];
     btn_sis_mem.position = CGPointMake(500,250);
     [self addChild:btn_sis_mem];
     
-    btn_resumen = [SKSpriteNode spriteNodeWithImageNamed:@"resumen"];
+    btn_resumen = [SKSpriteNode spriteNodeWithImageNamed:@"Resumen_blue"];
     btn_resumen.position = CGPointMake(500,150);
     [self addChild:btn_resumen];
     

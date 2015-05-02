@@ -12,6 +12,7 @@
 #import "Actividades.h"
 #import "Actividad_01.h"
 #import "Actividad_02.h"
+#import "Actividad_03.h"
 #import "Quizz.h"
 @import AVFoundation;
 
@@ -157,7 +158,13 @@
             Actividad_02 *scene = [[Actividad_02 alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition flipVerticalWithDuration:1]; //[SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
-        }else if([quizz containsPoint:location])
+        }else if([btn_act3 containsPoint:location])
+        {
+            Actividad_03 *scene = [[Actividad_03 alloc] initWithSize:self.size];
+            SKTransition *sceneTransition = [SKTransition flipVerticalWithDuration:1]; //[SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
+            [self.view presentScene:scene transition:sceneTransition];
+        }
+        else if([quizz containsPoint:location])
         {
             Quizz *scene = [[Quizz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition flipVerticalWithDuration:1]; //[SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
