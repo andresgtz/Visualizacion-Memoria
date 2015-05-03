@@ -46,6 +46,7 @@
 		1B1720A01AF2FD0F0046C715 /* Actividades_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B17209E1AF2FD0F0046C715 /* Actividades_2.png */; };
 		1B1720A11AF2FD0F0046C715 /* Capitulos_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B17209F1AF2FD0F0046C715 /* Capitulos_2.png */; };
 		1B1720A31AF302210046C715 /* Act_1_ins.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1720A21AF302210046C715 /* Act_1_ins.png */; };
+		1B3701211AF6A4B8009D9731 /* quiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B3701201AF6A4B8009D9731 /* quiz.png */; };
 		1B45C88C1AF4780700E87790 /* Pregunta_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C8871AF4780700E87790 /* Pregunta_2.m */; };
 		1B45C88D1AF4780700E87790 /* Pregunta_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C8891AF4780700E87790 /* Pregunta_3.m */; };
 		1B45C88E1AF4780700E87790 /* Pregunta_4.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B45C88B1AF4780700E87790 /* Pregunta_4.m */; };
@@ -110,6 +111,13 @@
 		1B94BCC01AF1905900622D75 /* decoder-2x4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B94BCBE1AF1905900622D75 /* decoder-2x4.png */; };
 		1B94BCC11AF1905900622D75 /* decoder-3x8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B94BCBF1AF1905900622D75 /* decoder-3x8.png */; };
 		1B94BCC31AF193A700622D75 /* boxMemory.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B94BCC21AF193A700622D75 /* boxMemory.png */; };
+		1B9687D91AF59D7E00CBF18F /* Pregunta_5.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9687CE1AF59D7E00CBF18F /* Pregunta_5.m */; };
+		1B9687DA1AF59D7E00CBF18F /* Pregunta_6.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9687D01AF59D7E00CBF18F /* Pregunta_6.m */; };
+		1B9687DB1AF59D7E00CBF18F /* Pregunta_7.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9687D21AF59D7E00CBF18F /* Pregunta_7.m */; };
+		1B9687DC1AF59D7E00CBF18F /* Pregunta_8.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9687D41AF59D7E00CBF18F /* Pregunta_8.m */; };
+		1B9687DD1AF59D7E00CBF18F /* Pregunta_9.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9687D61AF59D7E00CBF18F /* Pregunta_9.m */; };
+		1B9687DE1AF59D7E00CBF18F /* Pregunta_10.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9687D81AF59D7E00CBF18F /* Pregunta_10.m */; };
+		1B9687E01AF59E1F00CBF18F /* boton_respuesta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B9687DF1AF59E1F00CBF18F /* boton_respuesta.png */; };
 		1BE0278C1AE9E3A700EE3500 /* Actividad_02.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */; };
 		F0205C391ADF24EF00F56196 /* sistema_memoria.png in Resources */ = {isa = PBXBuildFile; fileRef = F0205C381ADF24EF00F56196 /* sistema_memoria.png */; };
 /* End PBXBuildFile section */
@@ -178,6 +186,7 @@
 		1B17209E1AF2FD0F0046C715 /* Actividades_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Actividades_2.png; sourceTree = "<group>"; };
 		1B17209F1AF2FD0F0046C715 /* Capitulos_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capitulos_2.png; sourceTree = "<group>"; };
 		1B1720A21AF302210046C715 /* Act_1_ins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Act_1_ins.png; sourceTree = "<group>"; };
+		1B3701201AF6A4B8009D9731 /* quiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quiz.png; sourceTree = "<group>"; };
 		1B45C8861AF4780700E87790 /* Pregunta_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pregunta_2.h; sourceTree = "<group>"; };
 		1B45C8871AF4780700E87790 /* Pregunta_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pregunta_2.m; sourceTree = "<group>"; };
 		1B45C8881AF4780700E87790 /* Pregunta_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pregunta_3.h; sourceTree = "<group>"; };
@@ -262,6 +271,19 @@
 		1B94BCBE1AF1905900622D75 /* decoder-2x4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "decoder-2x4.png"; sourceTree = "<group>"; };
 		1B94BCBF1AF1905900622D75 /* decoder-3x8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "decoder-3x8.png"; sourceTree = "<group>"; };
 		1B94BCC21AF193A700622D75 /* boxMemory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boxMemory.png; sourceTree = "<group>"; };
+		1B9687CD1AF59D7E00CBF18F /* Pregunta_5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pregunta_5.h; sourceTree = "<group>"; };
+		1B9687CE1AF59D7E00CBF18F /* Pregunta_5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pregunta_5.m; sourceTree = "<group>"; };
+		1B9687CF1AF59D7E00CBF18F /* Pregunta_6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pregunta_6.h; sourceTree = "<group>"; };
+		1B9687D01AF59D7E00CBF18F /* Pregunta_6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pregunta_6.m; sourceTree = "<group>"; };
+		1B9687D11AF59D7E00CBF18F /* Pregunta_7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pregunta_7.h; sourceTree = "<group>"; };
+		1B9687D21AF59D7E00CBF18F /* Pregunta_7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pregunta_7.m; sourceTree = "<group>"; };
+		1B9687D31AF59D7E00CBF18F /* Pregunta_8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pregunta_8.h; sourceTree = "<group>"; };
+		1B9687D41AF59D7E00CBF18F /* Pregunta_8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pregunta_8.m; sourceTree = "<group>"; };
+		1B9687D51AF59D7E00CBF18F /* Pregunta_9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pregunta_9.h; sourceTree = "<group>"; };
+		1B9687D61AF59D7E00CBF18F /* Pregunta_9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pregunta_9.m; sourceTree = "<group>"; };
+		1B9687D71AF59D7E00CBF18F /* Pregunta_10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pregunta_10.h; sourceTree = "<group>"; };
+		1B9687D81AF59D7E00CBF18F /* Pregunta_10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pregunta_10.m; sourceTree = "<group>"; };
+		1B9687DF1AF59E1F00CBF18F /* boton_respuesta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_respuesta.png; sourceTree = "<group>"; };
 		1BE0278A1AE9E3A700EE3500 /* Actividad_02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actividad_02.h; sourceTree = "<group>"; };
 		1BE0278B1AE9E3A700EE3500 /* Actividad_02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actividad_02.m; sourceTree = "<group>"; };
 		F0205C381ADF24EF00F56196 /* sistema_memoria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sistema_memoria.png; sourceTree = "<group>"; };
@@ -380,6 +402,18 @@
 				1B45C8891AF4780700E87790 /* Pregunta_3.m */,
 				1B45C88A1AF4780700E87790 /* Pregunta_4.h */,
 				1B45C88B1AF4780700E87790 /* Pregunta_4.m */,
+				1B9687CD1AF59D7E00CBF18F /* Pregunta_5.h */,
+				1B9687CE1AF59D7E00CBF18F /* Pregunta_5.m */,
+				1B9687CF1AF59D7E00CBF18F /* Pregunta_6.h */,
+				1B9687D01AF59D7E00CBF18F /* Pregunta_6.m */,
+				1B9687D11AF59D7E00CBF18F /* Pregunta_7.h */,
+				1B9687D21AF59D7E00CBF18F /* Pregunta_7.m */,
+				1B9687D31AF59D7E00CBF18F /* Pregunta_8.h */,
+				1B9687D41AF59D7E00CBF18F /* Pregunta_8.m */,
+				1B9687D51AF59D7E00CBF18F /* Pregunta_9.h */,
+				1B9687D61AF59D7E00CBF18F /* Pregunta_9.m */,
+				1B9687D71AF59D7E00CBF18F /* Pregunta_10.h */,
+				1B9687D81AF59D7E00CBF18F /* Pregunta_10.m */,
 				1B45C88F1AF4781600E87790 /* Resultado_Quiz.h */,
 				1B45C8901AF4781600E87790 /* Resultado_Quiz.m */,
 				1B86B9E61ADF20DA00782F2F /* Capitulos.m */,
@@ -417,6 +451,7 @@
 			children = (
 				1B462BB51AE86E7900F600F0 /* Actividad1 */,
 				1B86B9EC1ADF280E00782F2F /* button_left.png */,
+				1B9687DF1AF59E1F00CBF18F /* boton_respuesta.png */,
 				1B17209E1AF2FD0F0046C715 /* Actividades_2.png */,
 				1B17209F1AF2FD0F0046C715 /* Capitulos_2.png */,
 				1B17209C1AF2D6110046C715 /* Actividad_1_new.png */,
@@ -454,6 +489,7 @@
 				1B62C8D01AF32B200017DAE8 /* Actividad_1_blue.png */,
 				1B62C8D11AF32B200017DAE8 /* Actividad_2_blue.png */,
 				1B62C8D21AF32B200017DAE8 /* Actividad_3_blue.png */,
+				1B3701201AF6A4B8009D9731 /* quiz.png */,
 				1B62C8D31AF32B200017DAE8 /* quizz.png */,
 				1B45C89A1AF483E500E87790 /* Celda_Binaria_blue.png */,
 				1B45C89B1AF483E500E87790 /* Introduccion_blue.png */,
@@ -659,7 +695,9 @@
 				1B94BCC01AF1905900622D75 /* decoder-2x4.png in Resources */,
 				1B86B9F71ADF280E00782F2F /* button_right@2x.png in Resources */,
 				1B7FC93A1AE944B30047AE3F /* actividad_1_linas.png in Resources */,
+				1B9687E01AF59E1F00CBF18F /* boton_respuesta.png in Resources */,
 				1B0E49BA1ADDDF92002A888B /* Main.storyboard in Resources */,
+				1B3701211AF6A4B8009D9731 /* quiz.png in Resources */,
 				1B94BCC31AF193A700622D75 /* boxMemory.png in Resources */,
 				1B462BAA1AE8621400F600F0 /* Actividad1.png in Resources */,
 				1B0E49EE1ADDE9EA002A888B /* memoria_nxm.png in Resources */,
@@ -680,7 +718,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9687DC1AF59D7E00CBF18F /* Pregunta_8.m in Sources */,
 				1B4632C61ADF37520012ABEB /* Cap01_MemRAM.m in Sources */,
+				1B9687DD1AF59D7E00CBF18F /* Pregunta_9.m in Sources */,
 				1B4632BF1ADF36B80012ABEB /* Cap01_Intro.m in Sources */,
 				1B1720851AF29F910046C715 /* Cap01_MemRAM_NxM_2.m in Sources */,
 				1B1720791AF29F7F0046C715 /* Cap01_CelBin_3.m in Sources */,
@@ -698,15 +738,19 @@
 				1B0E49AC1ADDDF92002A888B /* main.m in Sources */,
 				1B4632C91ADF376F0012ABEB /* Cap01_CelBin.m in Sources */,
 				1B86B9EA1ADF20FA00782F2F /* Actividades.m in Sources */,
+				1B9687D91AF59D7E00CBF18F /* Pregunta_5.m in Sources */,
 				1B4632CC1ADF37E30012ABEB /* Cap01_MemRAM_NxM.m in Sources */,
+				1B9687DE1AF59D7E00CBF18F /* Pregunta_10.m in Sources */,
 				1B45C8911AF4781600E87790 /* Resultado_Quiz.m in Sources */,
 				1B462BD31AE87E7900F600F0 /* SKTAudio.m in Sources */,
 				1B462BD21AE87E7900F600F0 /* SKNode+SKTExtras.m in Sources */,
+				1B9687DB1AF59D7E00CBF18F /* Pregunta_7.m in Sources */,
 				1B17208B1AF29FAB0046C715 /* Cap01_SistMemoria_3.m in Sources */,
 				1B1720841AF29F910046C715 /* Cap01_MemRAM_2.m in Sources */,
 				1B462BD01AE87E7900F600F0 /* SKAction+SKTExtras.m in Sources */,
 				1B1720781AF29F7F0046C715 /* Cap01_CelBin_2.m in Sources */,
 				1B62C8DA1AF32BD30017DAE8 /* Actividad_03.m in Sources */,
+				1B9687DA1AF59D7E00CBF18F /* Pregunta_6.m in Sources */,
 				1B17208A1AF29FAB0046C715 /* Cap01_SistMemoria_2.m in Sources */,
 				1B86B9E71ADF20DA00782F2F /* Capitulos.m in Sources */,
 				1B462BD41AE87E7900F600F0 /* SKTUtils.mm in Sources */,

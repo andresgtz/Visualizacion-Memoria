@@ -82,7 +82,7 @@
     btn_act3.position = CGPointMake(500,350);
     [self addChild:btn_act3];
     
-    quizz = [SKSpriteNode spriteNodeWithImageNamed:@"quizz"];
+    quizz = [SKSpriteNode spriteNodeWithImageNamed:@"quiz"];
     quizz.position = CGPointMake(500,200);
     [self addChild:quizz];
    
