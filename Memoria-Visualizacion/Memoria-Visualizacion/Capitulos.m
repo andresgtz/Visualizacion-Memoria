@@ -189,7 +189,7 @@
          else if([startButton containsPoint:location])
          {
              Scene00 *scene = [[Scene00 alloc] initWithSize:self.size];
-             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:0];
+             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
              [self.view presentScene:scene transition:sceneTransition];
          }
         

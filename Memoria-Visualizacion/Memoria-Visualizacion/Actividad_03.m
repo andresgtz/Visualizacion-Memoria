@@ -15,6 +15,7 @@
 #import "Actividad_01.h"
 #import "Actividad_03.h"
 #import "Actividades.h"
+#import "Quizz.h"
 
 @implementation Actividad_03
 {
@@ -792,13 +793,13 @@
         }
         else if([leftButton containsPoint:location])
         {
-            Actividad_01 *scene = [[Actividad_01 alloc] initWithSize:self.size];
+            Actividad_02 *scene = [[Actividad_02 alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
         else if([rightButton containsPoint:location])
         {
-            Actividad_03 *scene = [[Actividad_03 alloc] initWithSize:self.size];
+            Quizz *scene = [[Quizz alloc] initWithSize:self.size];
             SKTransition *sceneTransition = [SKTransition fadeWithColor:[UIColor darkGrayColor] duration:1];
             [self.view presentScene:scene transition:sceneTransition];
         }
@@ -2286,7 +2287,7 @@
                 
                 mem_1.position = currentPoint;
                 
-                [self changeLine1:[UIColor redColor]];
+                [self changeLine1_2:[UIColor redColor]];
                 
                 _inPlace_1 = YES;
                 _enLugar++;
@@ -2300,7 +2301,7 @@
                 
                 mem_1.position = currentPoint;
                 
-                [self changeLine2:[UIColor redColor]];
+                [self changeLine2_2:[UIColor redColor]];
                 
                 
                 _inPlace_1 = YES;
@@ -2315,7 +2316,7 @@
                 
                 mem_1.position = currentPoint;
                 
-                [self changeLine3:[UIColor redColor]];
+                [self changeLine3_2:[UIColor redColor]];
                 
                 _inPlace_1 = YES;
                 _enLugar++;
@@ -2330,7 +2331,7 @@
                 
                 mem_1.position = currentPoint;
                 
-                [self changeLine4:[UIColor redColor]];
+                [self changeLine4_2:[UIColor redColor]];
                 
                 
                 _inPlace_1 = YES;
@@ -2345,7 +2346,7 @@
                 
                 mem_1.position = currentPoint;
                 
-                [self changeLine5:[UIColor redColor]];
+                [self changeLine5_2:[UIColor redColor]];
                 
                 _inPlace_1 = YES;
                 _enLugar++;
@@ -2360,7 +2361,7 @@
                 
                 mem_1.position = currentPoint;
                 
-                [self changeLine6:[UIColor redColor]];
+                [self changeLine6_2:[UIColor redColor]];
                 
                 _inPlace_1 = YES;
                 _enLugar++;
@@ -2375,7 +2376,7 @@
                 
                 mem_1.position = currentPoint;
                 
-                [self changeLine7:[UIColor redColor]];
+                [self changeLine7_2:[UIColor redColor]];
                 
                 _inPlace_1 = YES;
                 _enLugar++;
@@ -2390,7 +2391,7 @@
                 
                 mem_1.position = currentPoint;
                 
-                [self changeLine8:[UIColor redColor]];
+                [self changeLine8_2:[UIColor redColor]];
                 
                 _inPlace_1 = YES;
                 _enLugar++;
@@ -2422,7 +2423,7 @@
                 
                 mem_2.position = currentPoint;
                 
-                [self changeLine1:[UIColor redColor]];
+                [self changeLine1_2:[UIColor redColor]];
                 
                 _inPlace_1 = YES;
                 _enLugar++;
@@ -2436,7 +2437,7 @@
                 
                 mem_2.position = currentPoint;
                 
-                [self changeLine2:[UIColor redColor]];
+                [self changeLine2_2:[UIColor redColor]];
                 
                 
                 _inPlace_2 = YES;
@@ -2451,7 +2452,7 @@
                 
                 mem_2.position = currentPoint;
                 
-                [self changeLine3:[UIColor redColor]];
+                [self changeLine3_2:[UIColor redColor]];
                 
                 _inPlace_2 = YES;
                 _enLugar++;
@@ -2466,7 +2467,7 @@
                 
                 mem_2.position = currentPoint;
                 
-                [self changeLine4:[UIColor redColor]];
+                [self changeLine4_2:[UIColor redColor]];
                 
                 
                 _inPlace_2 = YES;
@@ -2481,7 +2482,7 @@
                 
                 mem_2.position = currentPoint;
                 
-                [self changeLine5:[UIColor redColor]];
+                [self changeLine5_2:[UIColor redColor]];
                 
                 _inPlace_2 = YES;
                 _enLugar++;
@@ -2496,7 +2497,7 @@
                 
                 mem_2.position = currentPoint;
                 
-                [self changeLine6:[UIColor redColor]];
+                [self changeLine6_2:[UIColor redColor]];
                 
                 _inPlace_2 = YES;
                 _enLugar++;
@@ -2511,7 +2512,7 @@
                 
                 mem_2.position = currentPoint;
                 
-                [self changeLine7:[UIColor redColor]];
+                [self changeLine7_2:[UIColor redColor]];
                 
                 _inPlace_2 = YES;
                 _enLugar++;
@@ -2526,7 +2527,7 @@
                 
                 mem_2.position = currentPoint;
                 
-                [self changeLine8:[UIColor redColor]];
+                [self changeLine8_2:[UIColor redColor]];
                 
                 _inPlace_2 = YES;
                 _enLugar++;
@@ -2557,7 +2558,7 @@
                 
                 mem_3.position = currentPoint;
                 
-                [self changeLine1:[UIColor redColor]];
+                [self changeLine1_2:[UIColor redColor]];
                 
                 _inPlace_3 = YES;
                 _enLugar++;
@@ -2571,7 +2572,7 @@
                 
                 mem_3.position = currentPoint;
                 
-                [self changeLine2:[UIColor redColor]];
+                [self changeLine2_2:[UIColor redColor]];
                 
                 
                 _inPlace_3 = YES;
@@ -2586,7 +2587,7 @@
                 
                 mem_3.position = currentPoint;
                 
-                [self changeLine3:[UIColor redColor]];
+                [self changeLine3_2:[UIColor redColor]];
                 
                 _inPlace_3 = YES;
                 _enLugar++;
@@ -2601,7 +2602,7 @@
                 
                 mem_3.position = currentPoint;
                 
-                [self changeLine4:[UIColor redColor]];
+                [self changeLine4_2:[UIColor redColor]];
                 
                 
                 _inPlace_3 = YES;
@@ -2616,7 +2617,7 @@
                 
                 mem_3.position = currentPoint;
                 
-                [self changeLine5:[UIColor redColor]];
+                [self changeLine5_2:[UIColor redColor]];
                 
                 _enLugar++;
                 _inPlace_3 = YES;
@@ -2631,7 +2632,7 @@
                 
                 mem_3.position = currentPoint;
                 
-                [self changeLine6:[UIColor redColor]];
+                [self changeLine6_2:[UIColor redColor]];
                 
                 _inPlace_3 = YES;
                 _enLugar++;
@@ -2646,7 +2647,7 @@
                 
                 mem_3.position = currentPoint;
                 
-                [self changeLine7:[UIColor redColor]];
+                [self changeLine7_2:[UIColor redColor]];
                 
                 _inPlace_3 = YES;
                 _enLugar++;
@@ -2661,7 +2662,7 @@
                 
                 mem_3.position = currentPoint;
                 
-                [self changeLine8:[UIColor redColor]];
+                [self changeLine8_2:[UIColor redColor]];
                 
                 _inPlace_3 = YES;
                 _enLugar++;
@@ -2692,7 +2693,7 @@
                 
                 mem_4.position = currentPoint;
                 
-                [self changeLine1:[UIColor redColor]];
+                [self changeLine1_2:[UIColor redColor]];
                 
                 _inPlace_4 = YES;
                 _enLugar++;
@@ -2706,7 +2707,7 @@
                 
                 mem_4.position = currentPoint;
                 
-                [self changeLine2:[UIColor redColor]];
+                [self changeLine2_2:[UIColor redColor]];
                 
                 
                 _inPlace_4 = YES;
@@ -2721,7 +2722,7 @@
                 
                 mem_4.position = currentPoint;
                 
-                [self changeLine3:[UIColor redColor]];
+                [self changeLine3_2:[UIColor redColor]];
                 
                 _inPlace_4 = YES;
                 _enLugar++;
@@ -2736,7 +2737,7 @@
                 
                 mem_4.position = currentPoint;
                 
-                [self changeLine4:[UIColor redColor]];
+                [self changeLine4_2:[UIColor redColor]];
                 
                 
                 _inPlace_4 = YES;
@@ -2751,7 +2752,7 @@
                 
                 mem_4.position = currentPoint;
                 
-                [self changeLine5:[UIColor redColor]];
+                [self changeLine5_2:[UIColor redColor]];
                 
                 _inPlace_4 = YES;
                 _enLugar++;
@@ -2766,7 +2767,7 @@
                 
                 mem_4.position = currentPoint;
                 
-                [self changeLine6:[UIColor redColor]];
+                [self changeLine6_2:[UIColor redColor]];
                 
                 _inPlace_4 = YES;
                 _enLugar++;
@@ -2781,7 +2782,7 @@
                 
                 mem_4.position = currentPoint;
                 
-                [self changeLine7:[UIColor redColor]];
+                [self changeLine7_2:[UIColor redColor]];
                 
                 _inPlace_4 = YES;
                 _enLugar++;
@@ -2796,7 +2797,7 @@
                 
                 mem_4.position = currentPoint;
                 
-                [self changeLine8:[UIColor redColor]];
+                [self changeLine8_2:[UIColor redColor]];
                 
                 _inPlace_4 = YES;
                 _enLugar++;
